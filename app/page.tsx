@@ -1,12 +1,11 @@
-import { FillInSlot } from "@/components/fill-in-slot";
 import { ScheduleCta } from "@/components/schedule-cta";
 import {
+  bio,
   fallbackLabels,
   locked,
   photos,
   processTeaser,
   site,
-  slots,
 } from "@/lib/content";
 import Link from "next/link";
 
@@ -26,7 +25,7 @@ export default function HomePage() {
               {site.wordmark}
             </h1>
             <p className="max-w-md text-lg text-muted">{site.tagline}</p>
-            <ScheduleCta href="#schedule" variant="button" />
+            <ScheduleCta href={site.scheduleHref} variant="button" />
             <Link
               href="/capabilities"
               className="text-sm text-muted underline decoration-ink/20 underline-offset-4 hover:text-ink"
@@ -43,7 +42,7 @@ export default function HomePage() {
             <h2 id="about-heading" className="text-5xl font-medium tracking-tight md:text-6xl">
               Who I am
             </h2>
-            <FillInSlot label={slots.bio} className="min-h-32" />
+            <p className="max-w-2xl text-lg text-muted">{bio}</p>
             <ul className="flex flex-wrap gap-x-4 gap-y-2 text-sm text-muted">
               {fallbackLabels.map((label) => (
                 <li key={label}>{label}</li>
@@ -77,7 +76,6 @@ export default function HomePage() {
             How I work in public
           </h2>
           <p className="max-w-2xl text-lg">{locked.stanceTeaser}</p>
-          <FillInSlot label={slots.stances} className="max-w-2xl min-h-24" />
         </div>
       </section>
 
@@ -90,8 +88,7 @@ export default function HomePage() {
           <h2 id="schedule-heading" className="text-5xl font-medium tracking-tight md:text-6xl">
             {site.scheduleLabel}
           </h2>
-          <p className="text-muted">{locked.bookingComing}</p>
-          <FillInSlot label={slots.bookingUrl} className="max-w-xl" />
+          <ScheduleCta href={site.scheduleHref} variant="button" />
         </div>
       </section>
     </main>

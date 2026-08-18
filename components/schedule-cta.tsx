@@ -7,7 +7,7 @@ type ScheduleCtaProps = {
 };
 
 export function ScheduleCta({
-  href = "/#schedule",
+  href = site.scheduleHref,
   variant = "text",
   className = "",
 }: ScheduleCtaProps) {
