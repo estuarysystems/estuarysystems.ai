@@ -24,7 +24,7 @@ export const slots = {
   bio: "[BIO FROM GEORGE]",
   stances: "[STANCES FROM GEORGE]",
   bookingUrl: "[BOOKING URL]",
-  pricing: "[PRICING FROM GEORGE]",
+  price: "[PRICE]",
   tools: "[TOOLS FROM GEORGE]",
 } as const;
 
@@ -113,3 +113,49 @@ export const howWeWork =
 export const toolsPlaceholder = "Tools and products will be listed here.";
 
 export const blogPlaceholder = "Posts will be listed here.";
+
+export const pricing = {
+  heading: "Pricing",
+  tools: {
+    name: "Tools",
+    promise: "Buy a tool or product outright.",
+    bullets: [
+      "One-time purchase.",
+      "Yours to keep.",
+      "See the Tools page for what is for sale.",
+    ],
+    buttonLabel: "View tools",
+    buttonHref: "/tools",
+  },
+  retainerPromise: "Monthly support retainer.",
+  retainerButtonHref: "/#schedule",
+  baseRate: "$188/hour",
+  extraRate: "$235/hour",
+  retainers: [
+    {
+      name: "16 hours / month",
+      hours: 16,
+      monthly: "$3,008 / month included",
+    },
+    {
+      name: "40 hours / month",
+      hours: 40,
+      monthly: "$7,520 / month included",
+    },
+    {
+      name: "80 hours / month",
+      hours: 80,
+      monthly: "$15,040 / month included",
+    },
+  ],
+} as const;
+
+export function retainerBullets(hours: number): string[] {
+  return [
+    `${hours} hours included that month.`,
+    "Unused hours do not roll.",
+    `Extra hours at ${pricing.extraRate}.`,
+    "George does the work.",
+    "Schedule a call to start.",
+  ];
+}

@@ -8,7 +8,7 @@ One static Next.js App Router site. Vercel deploys from the **repo root**. This 
 
 - `/` — Me / landing
 - `/capabilities` — locked capability copy from 00.11.01
-- `/pricing` — labeled slot only
+- `/pricing` — Tools card plus George’s public retainer rates
 - `/tools` — labeled slot only
 - `/blog` — empty index
 
@@ -45,7 +45,7 @@ Do not invent these. Replace the labeled placeholders on the page:
 - `[BIO FROM GEORGE]`
 - `[STANCES FROM GEORGE]`
 - `[BOOKING URL]`
-- `[PRICING FROM GEORGE]`
+- `[PRICE]` on the Tools pricing card (no dollar amount until George pastes one)
 - `[TOOLS FROM GEORGE]`
 - `PHOTO: George - hero (working at a computer)`
 - `PHOTO: George - about`
