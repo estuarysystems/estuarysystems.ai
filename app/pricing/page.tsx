@@ -47,7 +47,7 @@ export default function PricingPage() {
             <PricingCard
               name={pricing.custom.name}
               description={pricing.custom.description}
-              buttonLabel={site.scheduleLabel}
+              buttonLabel={pricing.custom.buttonLabel}
               buttonHref={pricing.scheduleHref}
             />
           </div>

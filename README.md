@@ -40,17 +40,20 @@ npm run build
 
 ## George fill-in slots
 
-Do not invent these. Replace the labeled placeholders on the page:
+Do not invent these. Filled slots use George’s exact words:
 
-- `[BIO FROM GEORGE]`
-- `[STANCES FROM GEORGE]`
-- `[BOOKING URL]`
+- About / Me bio
+- Schedule URL: `https://cal.com/george-lu-ouzdmq/15min`
+- Custom card CTA: Need custom availability? Let’s have a chat!
+
+Still empty (do not invent):
+
 - `[PRICE]` on the Tools pricing card (no dollar amount until George pastes one)
 - `[TOOLS FROM GEORGE]`
+- Extra stances beyond the locked line
+- Blog posts
 
 Real photos are in `public/george-hero.jpg` (Me / hero) and `public/george-about.jpg` (About).
-
-Until a booking URL exists, the schedule CTA jumps to `/#schedule` and the page shows **Booking link coming**. Do not add Cal.com or Calendly unless George pastes a URL.
 
 ## Locked
 

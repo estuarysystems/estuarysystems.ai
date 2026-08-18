@@ -4,8 +4,12 @@ export const site = {
   domain: "estuarysystems.ai",
   tagline: "An AI agency. We execute with current tools.",
   scheduleLabel: "Schedule time to chat with George",
+  scheduleHref: "https://cal.com/george-lu-ouzdmq/15min",
   exploreCapabilities: "Explore capabilities",
 } as const;
+
+export const bio =
+  "Hi, I’m George. I work at the intersection of business and engineering to bring execution to you and your team. Let me review your systems with you and see how I can help.";
 
 export const nav = [
   { href: "/", label: "Me" },
@@ -27,9 +31,6 @@ export const photos = {
 } as const;
 
 export const slots = {
-  bio: "[BIO FROM GEORGE]",
-  stances: "[STANCES FROM GEORGE]",
-  bookingUrl: "[BOOKING URL]",
   price: "[PRICE]",
   tools: "[TOOLS FROM GEORGE]",
 } as const;
@@ -43,7 +44,6 @@ export const fallbackLabels = [
 
 export const locked = {
   stanceTeaser: "I do not use AI to make pictures.",
-  bookingComing: "Booking link coming",
 } as const;
 
 export const processTeaser =
@@ -135,7 +135,7 @@ export const blogPlaceholder = "Posts will be listed here.";
 
 export const pricing = {
   heading: "Pricing",
-  scheduleHref: "/#schedule",
+  scheduleHref: site.scheduleHref,
   rateLine: "$188/hr base, extra $235/hr",
   tools: {
     name: "Tools",
@@ -156,5 +156,6 @@ export const pricing = {
   custom: {
     name: "Custom",
     description: "TBD",
+    buttonLabel: "Need custom availability? Let’s have a chat!",
   },
 } as const;
