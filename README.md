@@ -7,8 +7,8 @@ One static Next.js App Router site. Vercel deploys from the **repo root**. This 
 ## Routes
 
 - `/` — Me / landing
-- `/capabilities` — locked capability copy from 00.11.01
-- `/pricing` — Tools card plus George’s public retainer rates
+- `/capabilities` — three primary cards, then the 00.11.01 list under And much more
+- `/pricing` — Tools, Medium, Heavy, Custom
 - `/tools` — labeled slot only
 - `/blog` — empty index
 
@@ -47,8 +47,8 @@ Do not invent these. Replace the labeled placeholders on the page:
 - `[BOOKING URL]`
 - `[PRICE]` on the Tools pricing card (no dollar amount until George pastes one)
 - `[TOOLS FROM GEORGE]`
-- `PHOTO: George - hero (working at a computer)`
-- `PHOTO: George - about`
+
+Real photos are in `public/george-hero.jpg` (Me / hero) and `public/george-about.jpg` (About).
 
 Until a booking URL exists, the schedule CTA jumps to `/#schedule` and the page shows **Booking link coming**. Do not add Cal.com or Calendly unless George pastes a URL.
 

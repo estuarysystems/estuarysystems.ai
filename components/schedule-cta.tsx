@@ -2,7 +2,7 @@ import { site } from "@/lib/content";
 
 type ScheduleCtaProps = {
   href?: string;
-  variant?: "circle" | "text";
+  variant?: "button" | "text";
   className?: string;
 };
 
@@ -11,11 +11,11 @@ export function ScheduleCta({
   variant = "text",
   className = "",
 }: ScheduleCtaProps) {
-  if (variant === "circle") {
+  if (variant === "button") {
     return (
       <a
         href={href}
-        className={`inline-flex size-40 shrink-0 items-center justify-center rounded-full bg-white px-5 text-center text-sm font-medium leading-snug text-ink no-underline ring-1 ring-ink/20 transition hover:bg-paper focus-visible:outline-offset-4 ${className}`}
+        className={`inline-flex min-h-12 items-center justify-center border border-ink px-6 py-3 text-sm font-medium text-ink no-underline hover:bg-ink hover:text-paper ${className}`}
       >
         {site.scheduleLabel}
       </a>

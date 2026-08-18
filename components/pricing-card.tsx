@@ -3,34 +3,30 @@ import type { ReactNode } from "react";
 
 type PricingCardProps = {
   name: string;
-  promise: string;
-  bullets: readonly string[];
-  price: ReactNode;
+  description: string;
+  price?: ReactNode;
+  rateLine?: string;
   buttonLabel: string;
   buttonHref: string;
 };
 
 export function PricingCard({
   name,
-  promise,
-  bullets,
+  description,
   price,
+  rateLine,
   buttonLabel,
   buttonHref,
 }: PricingCardProps) {
   return (
-    <article className="flex h-full flex-col border border-line bg-white p-6 md:p-8">
-      <h2 className="text-xl font-medium tracking-tight">{name}</h2>
-      <p className="mt-3 text-sm leading-relaxed text-muted">{promise}</p>
-      <ul className="mt-6 flex-1 space-y-2 text-sm leading-relaxed text-ink">
-        {bullets.map((bullet) => (
-          <li key={bullet}>{bullet}</li>
-        ))}
-      </ul>
-      <div className="mt-8">{price}</div>
+    <article className="flex h-full flex-col border border-line px-6 py-8 md:px-7 md:py-10">
+      <h2 className="text-4xl font-medium tracking-tight md:text-5xl">{name}</h2>
+      <p className="mt-5 text-base text-muted">{description}</p>
+      {price ? <div className="mt-8 text-2xl font-medium tracking-tight">{price}</div> : null}
+      {rateLine ? <p className="mt-3 text-xs text-muted">{rateLine}</p> : null}
       <Link
         href={buttonHref}
-        className="mt-8 inline-flex min-h-12 items-center justify-center bg-ink px-4 py-3 text-center text-sm font-medium text-paper no-underline hover:bg-hero"
+        className="mt-auto pt-10 inline-flex min-h-12 items-center justify-center border border-ink px-4 py-3 text-center text-sm font-medium text-ink no-underline hover:bg-ink hover:text-paper"
       >
         {buttonLabel}
       </Link>
