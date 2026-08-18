@@ -44,7 +44,6 @@ export const fallbackLabels = [
 export const locked = {
   stanceTeaser: "I do not use AI to make pictures.",
   bookingComing: "Booking link coming",
-  bookASlot: "Book a slot. George will call you.",
 } as const;
 
 export const processTeaser =

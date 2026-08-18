@@ -90,7 +90,6 @@ export default function HomePage() {
           <h2 id="schedule-heading" className="text-5xl font-medium tracking-tight md:text-6xl">
             {site.scheduleLabel}
           </h2>
-          <p className="max-w-2xl text-lg text-muted">{locked.bookASlot}</p>
           <p className="text-muted">{locked.bookingComing}</p>
           <FillInSlot label={slots.bookingUrl} className="max-w-xl" />
         </div>
