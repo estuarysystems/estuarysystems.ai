@@ -16,8 +16,14 @@ export const nav = [
 ] as const;
 
 export const photos = {
-  hero: "PHOTO: George - hero (working at a computer)",
-  about: "PHOTO: George - about",
+  hero: {
+    src: "/george-hero.jpg",
+    alt: "George Lu",
+  },
+  about: {
+    src: "/george-about.jpg",
+    alt: "George Lu",
+  },
 } as const;
 
 export const slots = {
@@ -36,7 +42,6 @@ export const fallbackLabels = [
 ] as const;
 
 export const locked = {
-  afterYouBook: "After you book, George calls you.",
   stanceTeaser: "I do not use AI to make pictures.",
   bookingComing: "Booking link coming",
   bookASlot: "Book a slot. George will call you.",
@@ -47,6 +52,21 @@ export const processTeaser =
 
 export const capabilitiesIntro =
   "Estuary is an AI agency at the intersection of business and engineering. We focus on execution: using current AI tools to get work out the door, and staying current so the work stays efficient.";
+
+export const primaryCapabilities = [
+  {
+    title: "System conversion",
+    line: "Convert systems from how they run with people to an AI-run process.",
+  },
+  {
+    title: "Process mapping",
+    line: "Figure out exactly how each process in the business runs, then judge whether AI can and should replace it.",
+  },
+  {
+    title: "Local installation",
+    line: "Local model and agent installation.",
+  },
+] as const;
 
 export const capabilities = [
   {
@@ -116,46 +136,26 @@ export const blogPlaceholder = "Posts will be listed here.";
 
 export const pricing = {
   heading: "Pricing",
+  scheduleHref: "/#schedule",
+  rateLine: "$188/hr base, extra $235/hr",
   tools: {
     name: "Tools",
-    promise: "Buy a tool or product outright.",
-    bullets: [
-      "One-time purchase.",
-      "Yours to keep.",
-      "See the Tools page for what is for sale.",
-    ],
+    description: "Buy a tool.",
     buttonLabel: "View tools",
     buttonHref: "/tools",
   },
-  retainerPromise: "Monthly support retainer.",
-  retainerButtonHref: "/#schedule",
-  baseRate: "$188/hour",
-  extraRate: "$235/hour",
-  retainers: [
-    {
-      name: "16 hours / month",
-      hours: 16,
-      monthly: "$3,008 / month included",
-    },
-    {
-      name: "40 hours / month",
-      hours: 40,
-      monthly: "$7,520 / month included",
-    },
-    {
-      name: "80 hours / month",
-      hours: 80,
-      monthly: "$15,040 / month included",
-    },
-  ],
+  medium: {
+    name: "Medium",
+    description: "16 hours / month",
+    price: "$3,008 / month",
+  },
+  heavy: {
+    name: "Heavy",
+    description: "40 hours / month",
+    price: "$7,520 / month",
+  },
+  custom: {
+    name: "Custom",
+    description: "TBD",
+  },
 } as const;
-
-export function retainerBullets(hours: number): string[] {
-  return [
-    `${hours} hours included that month.`,
-    "Unused hours do not roll.",
-    `Extra hours at ${pricing.extraRate}.`,
-    "George does the work.",
-    "Schedule a call to start.",
-  ];
-}

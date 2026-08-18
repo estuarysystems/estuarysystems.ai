@@ -17,20 +17,20 @@ export function SiteHeader() {
   const [open, setOpen] = useState(false);
 
   return (
-    <header className="sticky top-0 z-40 border-b border-line/70 bg-paper/95 backdrop-blur">
-      <div className="mx-auto flex max-w-5xl items-center justify-between gap-4 px-5 py-4">
-        <Link href="/" className="shrink-0 text-sm font-medium tracking-tight text-ink">
+    <header className="sticky top-0 z-40 bg-paper/90 backdrop-blur">
+      <div className="mx-auto flex max-w-6xl items-center justify-between gap-4 px-5 py-5">
+        <Link href="/" className="shrink-0 text-sm tracking-tight text-ink">
           {site.wordmark}
         </Link>
 
-        <nav aria-label="Primary" className="hidden items-center gap-6 md:flex">
+        <nav aria-label="Primary" className="hidden items-center gap-8 md:flex">
           {nav.map((item) => (
             <Link
               key={item.href}
               href={item.href}
               className={
                 isActive(pathname, item.href)
-                  ? "text-sm text-ink underline decoration-ink/40 underline-offset-4"
+                  ? "text-sm text-ink"
                   : "text-sm text-muted hover:text-ink"
               }
             >
@@ -54,16 +54,16 @@ export function SiteHeader() {
         <nav
           id="mobile-nav"
           aria-label="Primary"
-          className="border-t border-line/70 px-5 py-3 md:hidden"
+          className="border-t border-line px-5 py-4 md:hidden"
         >
-          <ul className="flex flex-col gap-3">
+          <ul className="flex flex-col gap-4">
             {nav.map((item) => (
               <li key={item.href}>
                 <Link
                   href={item.href}
                   className={
                     isActive(pathname, item.href)
-                      ? "text-sm text-ink underline decoration-ink/40 underline-offset-4"
+                      ? "text-sm text-ink"
                       : "text-sm text-muted"
                   }
                   onClick={() => setOpen(false)}

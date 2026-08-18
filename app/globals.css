@@ -1,14 +1,14 @@
 @import "tailwindcss";
 
 :root {
-  --paper: #f4f3ee;
-  --ink: #1c1c19;
-  --muted: #5c5b56;
-  --slot: #d8d7d1;
-  --slot-ink: #3f3e3a;
-  --hero: #2a2926;
-  --hero-ink: #f4f3ee;
-  --line: #d2d1cb;
+  --paper: #050505;
+  --ink: #f4f4f2;
+  --muted: #8a8a84;
+  --slot: #141414;
+  --slot-ink: #9a9a94;
+  --hero: #050505;
+  --hero-ink: #f4f4f2;
+  --line: #222222;
 }
 
 @theme inline {
@@ -26,7 +26,7 @@
 
 html {
   scroll-behavior: smooth;
-  color-scheme: light;
+  color-scheme: dark;
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -51,11 +51,19 @@ body {
   left: 1rem;
   top: -3rem;
   z-index: 80;
-  background: var(--paper);
-  color: var(--ink);
+  background: var(--ink);
+  color: var(--paper);
   padding: 0.5rem 0.75rem;
 }
 
 .skip-link:focus {
   top: 1rem;
+}
+
+summary::-webkit-details-marker {
+  display: none;
+}
+
+summary::marker {
+  content: "";
 }
