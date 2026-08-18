@@ -15,6 +15,7 @@ export default function HomePage() {
     <main id="main">
       <section>
         <div className="mx-auto grid max-w-6xl gap-12 px-5 py-16 md:grid-cols-[minmax(0,0.9fr)_minmax(0,1.1fr)] md:items-center md:py-24">
+          {/* eslint-disable-next-line @next/next/no-img-element */}
           <img
             src={photos.hero.src}
             alt={photos.hero.alt}
@@ -49,6 +50,7 @@ export default function HomePage() {
               ))}
             </ul>
           </div>
+          {/* eslint-disable-next-line @next/next/no-img-element */}
           <img
             src={photos.about.src}
             alt={photos.about.alt}
