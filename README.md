@@ -11,8 +11,10 @@ One static Next.js App Router site. Vercel deploys from the **repo root**. This 
 - `/pricing` — Tools, Medium, Heavy, Custom
 - `/tools` — labeled slot only
 - `/blog` — empty index
+- `/privacy` — locked Privacy copy
+- `/terms` — locked Terms copy
 
-No `/privacy`. No backend. No cron. No CMS. No login.
+No `/ada`. No cookie banner. No backend. No cron. No CMS. No login.
 
 ## Deploy on Vercel
 

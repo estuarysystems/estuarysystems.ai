@@ -133,6 +133,79 @@ export const toolsPlaceholder = "Tools and products will be listed here.";
 
 export const blogPlaceholder = "Posts will be listed here.";
 
+export const privacy = {
+  title: "Privacy",
+  sections: [
+    {
+      heading: "Who we are",
+      paragraphs: ["Estuary Systems LLC is an AI agency in the Bay Area."],
+    },
+    {
+      heading: "What we collect",
+      paragraphs: [
+        "We collect what you type and what Cal.com/hosting need to book a chat and run the site.",
+      ],
+    },
+    {
+      heading: "What we don't",
+      paragraphs: [
+        "We do not sell personal information.",
+        "We do not use confidential materials you send us to train models.",
+      ],
+    },
+    {
+      heading: "Who sees it",
+      paragraphs: ["Cal.com is a processor for booking. The host runs the site."],
+    },
+    {
+      heading: "How to reach us",
+      paragraphs: ["george@estuarysystems.ai"],
+    },
+  ],
+} as const;
+
+export const terms = {
+  title: "Terms",
+  sections: [
+    {
+      heading: "Not a law firm",
+      paragraphs: [
+        "Estuary Systems LLC builds software. We are not a law firm. Nothing on this site is legal advice.",
+      ],
+    },
+    {
+      heading: "Site is not a contract",
+      paragraphs: ["Prices can change. A listed price is not an offer."],
+    },
+    {
+      heading: "Booking is not engagement",
+      paragraphs: [
+        "A Cal.com chat is not a client relationship. Work starts when both sides sign.",
+      ],
+    },
+    {
+      heading: "IP",
+      paragraphs: [
+        "Site content is ours. Your materials stay yours until a signed SOW says otherwise.",
+      ],
+    },
+    {
+      heading: "AI can be wrong",
+      paragraphs: ["AI output can be wrong. You verify before you use it."],
+    },
+    {
+      heading: "Liability",
+      paragraphs: [
+        "Liability capped at fees you actually paid us. If you paid zero, that's the cap.",
+      ],
+    },
+    {
+      heading: "California",
+      paragraphs: ["California law. Bay Area venue."],
+    },
+  ],
+} as const;
+
 export const pricing = {
   heading: "Pricing",
   scheduleHref: site.scheduleHref,
