@@ -25,7 +25,7 @@ export default function HomePage() {
               {site.wordmark}
             </h1>
             <p className="max-w-md text-lg text-muted">{site.tagline}</p>
-            <ScheduleCta href={site.scheduleHref} variant="button" />
+            <ScheduleCta variant="button" />
             <Link
               href="/capabilities"
               className="text-sm text-muted underline decoration-ink/20 underline-offset-4 hover:text-ink"
@@ -88,7 +88,7 @@ export default function HomePage() {
           <h2 id="schedule-heading" className="text-5xl font-medium tracking-tight md:text-6xl">
             {site.scheduleLabel}
           </h2>
-          <ScheduleCta href={site.scheduleHref} variant="button" />
+          <ScheduleCta variant="button" />
         </div>
       </section>
     </main>
