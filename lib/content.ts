@@ -2,25 +2,69 @@ export const site = {
   wordmark: "Estuary Systems",
   legalName: "Estuary Systems LLC",
   domain: "estuarysystems.ai",
-  tagline: "An AI agency. We execute with current tools.",
+  tagline:
+    "Connecting businesses with technology so people can focus on being people.",
   scheduleLabel: "Schedule time to chat with George",
   scheduleHref: "/connect",
-  calEmbedSrc: "https://cal.com/george-lu-ouzdmq/15min?embed=true&theme=dark",
+  calEmbedSrc: "https://cal.com/george-lu-ouzdmq/15min?embed=true&theme=light",
   workWithMe: "Work with me",
-  exploreCapabilities: "Explore capabilities",
+  ctaLabel: "Start a conversation",
+  ctaHint: "Show us where you’re stuck.",
 } as const;
 
 export const bio =
   "Hi, I’m George. I work at the intersection of business and engineering to bring execution to you and your team. Let me review your systems with you and see how I can help.";
 
+export const aboutAgency =
+  "George Lu runs Estuary Systems LLC in Palo Alto. We are an AI integration and consulting agency. We help businesses put AI into operations so people can stay on the work only people should do.";
+
 export const nav = [
-  { href: "/", label: "Me" },
-  { href: "/capabilities", label: "Capabilities" },
+  { href: "/", label: "Home" },
+  { href: "/about", label: "About" },
   { href: "/alexandria", label: "Alexandria" },
   { href: "/connect", label: "Connect" },
-  { href: "/tools", label: "Tools" },
-  { href: "/blog", label: "Blog" },
 ] as const;
+
+export const walk = [
+  {
+    title: "Discover",
+    line: "We sit with how the work runs today, before anyone changes it.",
+  },
+  {
+    title: "Design",
+    line: "We pick one process and write what done looks like.",
+  },
+  {
+    title: "Build",
+    line: "We make the smallest version that can actually run.",
+  },
+  {
+    title: "Eval",
+    line: "You review the output. We keep it, change it, or stop.",
+  },
+] as const;
+
+export const firstTwoWeeks = {
+  heading: "First two weeks",
+  intro:
+    "What the first two weeks look like. This is a story, not an offer. Not a product. Not priced. No buy button.",
+  days: [
+    "Day 1. We walk the current process with you.",
+    "Day 2. We write down the steps and who touches each one.",
+    "Day 3. We name the one process we will try first.",
+    "Day 4. We write the target: inputs, output, who checks it.",
+    "Day 5. We cut anything that should not exist.",
+    "Day 6. We agree the smallest version we can run.",
+    "Day 7. We stand up a test lane. It does not touch live work.",
+    "Day 8. We wire the first handoff.",
+    "Day 9. We put a person on the output before it goes anywhere.",
+    "Day 10. We run it on a handful of real examples you already have.",
+    "Day 11. We fix what broke.",
+    "Day 12. You read the outputs.",
+    "Day 13. We compare them to the old way on the same examples.",
+    "Day 14. We decide: keep, change, or stop.",
+  ],
+} as const;
 
 export const photos = {
   hero: {
@@ -37,19 +81,9 @@ export const slots = {
   tools: "[TOOLS FROM GEORGE]",
 } as const;
 
-export const fallbackLabels = [
-  "George Lu",
-  "Estuary Systems LLC",
-  "Bay Area",
-  "AI agency",
-] as const;
-
 export const locked = {
   stanceTeaser: "I do not use AI to make pictures.",
 } as const;
-
-export const processTeaser =
-  "Map the work. Send the model only the fields the job needs. A person reads it before it sends or files.";
 
 export const capabilitiesIntro =
   "Estuary is an AI agency at the intersection of business and engineering. We focus on execution: using current AI tools to get work out the door, and staying current so the work stays efficient.";
