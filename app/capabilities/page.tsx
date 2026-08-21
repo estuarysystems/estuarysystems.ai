@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import { ExpandCard } from "@/components/expand-card";
-import { capabilities, primaryCapabilities } from "@/lib/content";
+import { capabilities, primaryCapabilities, site } from "@/lib/content";
 
 export const metadata: Metadata = {
   title: "Capabilities",
@@ -30,6 +31,15 @@ export default function CapabilitiesPage() {
               <ExpandCard key={item.title} title={item.title} line={item.line} />
             ))}
           </div>
+        </section>
+
+        <section className="mt-24">
+          <Link
+            href={site.scheduleHref}
+            className="inline-flex min-h-12 items-center justify-center border border-ink px-6 py-3 text-sm font-medium text-ink no-underline hover:bg-ink hover:text-paper"
+          >
+            {site.workWithMe}
+          </Link>
         </section>
       </div>
     </main>

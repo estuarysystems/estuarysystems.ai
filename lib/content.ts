@@ -4,7 +4,9 @@ export const site = {
   domain: "estuarysystems.ai",
   tagline: "An AI agency. We execute with current tools.",
   scheduleLabel: "Schedule time to chat with George",
-  scheduleHref: "https://cal.com/george-lu-ouzdmq/15min",
+  scheduleHref: "/connect",
+  calEmbedSrc: "https://cal.com/george-lu-ouzdmq/15min?embed=true&theme=dark",
+  workWithMe: "Work with me",
   exploreCapabilities: "Explore capabilities",
 } as const;
 
@@ -14,7 +16,8 @@ export const bio =
 export const nav = [
   { href: "/", label: "Me" },
   { href: "/capabilities", label: "Capabilities" },
-  { href: "/pricing", label: "Pricing" },
+  { href: "/alexandria", label: "Alexandria" },
+  { href: "/connect", label: "Connect" },
   { href: "/tools", label: "Tools" },
   { href: "/blog", label: "Blog" },
 ] as const;
@@ -31,7 +34,6 @@ export const photos = {
 } as const;
 
 export const slots = {
-  price: "[PRICE]",
   tools: "[TOOLS FROM GEORGE]",
 } as const;
 
@@ -133,6 +135,13 @@ export const toolsPlaceholder = "Tools and products will be listed here.";
 
 export const blogPlaceholder = "Posts will be listed here.";
 
+export const alexandriaShelves = [
+  "Operations",
+  "Writing",
+  "Code",
+  "Research",
+] as const;
+
 export const privacy = {
   title: "Privacy",
   sections: [
@@ -204,31 +213,4 @@ export const terms = {
       paragraphs: ["California law. Bay Area venue."],
     },
   ],
-} as const;
-
-export const pricing = {
-  heading: "Pricing",
-  scheduleHref: site.scheduleHref,
-  rateLine: "$188/hr base, extra $235/hr",
-  tools: {
-    name: "Tools",
-    description: "Buy a tool.",
-    buttonLabel: "View tools",
-    buttonHref: "/tools",
-  },
-  medium: {
-    name: "Medium",
-    description: "16 hours / month",
-    price: "$3,008 / month",
-  },
-  heavy: {
-    name: "Heavy",
-    description: "40 hours / month",
-    price: "$7,520 / month",
-  },
-  custom: {
-    name: "Custom",
-    description: "TBD",
-    buttonLabel: "Need custom availability? Let’s have a chat!",
-  },
 } as const;
