@@ -1,14 +1,14 @@
 @import "tailwindcss";
 
 :root {
-  --paper: #050505;
-  --ink: #f4f4f2;
-  --muted: #8a8a84;
-  --slot: #141414;
-  --slot-ink: #9a9a94;
-  --hero: #050505;
-  --hero-ink: #f4f4f2;
-  --line: #222222;
+  --paper: #f4f3ee;
+  --ink: #1c1c19;
+  --muted: #5c5b56;
+  --slot: #e7e6e0;
+  --slot-ink: #3f3e3a;
+  --hero: #f4f3ee;
+  --hero-ink: #1c1c19;
+  --line: #d2d1cb;
 }
 
 @theme inline {
@@ -26,7 +26,7 @@
 
 html {
   scroll-behavior: smooth;
-  color-scheme: dark;
+  color-scheme: light;
 }
 
 @media (prefers-reduced-motion: reduce) {

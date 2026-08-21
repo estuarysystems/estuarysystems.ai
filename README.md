@@ -1,22 +1,27 @@
 # estuarysystems.ai
 
-Temporary public company landing for **Estuary Systems LLC**. Spec: 00.11.02.
+Temporary public company landing for **Estuary Systems LLC**. Spec: 00.11.09.
 
-One static Next.js App Router site. Vercel deploys from the **repo root**. This is not georgelu.ai, EstuaryMC, Conveyor, or intake. Do not attach the real domain to Vercel.
+One static Next.js App Router site. Vercel deploys from the **repo root**. This is not georgelu.ai, EstuaryMC, Conveyor, or intake. Do not attach the real domain to Vercel. Vercel is test only.
 
 ## Routes
 
-- `/` — Me / landing
-- `/capabilities` — three primary cards, then the 00.11.01 list under And much more
+- `/` — Home: opening line, the walk, first two weeks, conversation CTA
+- `/about` — the only profile page: agency line, bio, stance, suit photo
 - `/alexandria` — search plus four empty shelves
 - `/connect` — scheduling only, Cal.com 15min embed
-- `/tools` — labeled slot only
-- `/blog` — empty index
 - `/privacy` — locked Privacy copy
 - `/terms` — locked Terms copy
 - `/pricing` — redirects to `/connect`
+- `/capabilities`, `/tools`, `/blog` — unlinked routes; inventory stays off the homepage
 
 No `/ada`. No cookie banner. No backend. No cron. No CMS. No login.
+
+## Nav
+
+Home | About | Alexandria | Connect
+
+Tools and Blog stay off the nav. There is no Me, Capabilities, or Pricing tab.
 
 ## Deploy on Vercel
 
@@ -26,7 +31,7 @@ No `/ada`. No cookie banner. No backend. No cron. No CMS. No login.
 4. Build Command: `npm run build` (default)
 5. Install Command: `npm install` (default)
 
-No environment variables are required.
+No environment variables are required. Do not attach estuarysystems.ai.
 
 ## Local
 
@@ -45,7 +50,7 @@ npm run build
 
 Do not invent these. Filled slots use George’s exact words:
 
-- About / Me bio
+- About bio
 - Schedule URL: `https://cal.com/george-lu-ouzdmq/15min` (embedded on `/connect`)
 
 Still empty (do not invent):
@@ -55,8 +60,8 @@ Still empty (do not invent):
 - Blog posts
 - Alexandria prompts
 
-Real photos are in `public/george-hero.jpg` (Me / hero) and `public/george-about.jpg` (About).
+The about suit photo is `public/george-about.jpg` and appears on `/about` only. Home has no photos.
 
 ## Locked
 
-Do not rewrite the capabilities intro or the 00.11.01 list. Do not invent bio, prices, products, posts, photos, or a booking URL. No Covenant, client names, dollars, Conveyor/intake, case studies, named projects, AI-generated pictures, testimonials, or social icons. No Pricing tab. Dollar amounts stay off Connect.
+Do not invent bio, prices, products, posts, photos, or a booking URL. No Covenant, client names, dollars, Conveyor/intake, case studies, named projects, AI-generated pictures, testimonials, or social icons. No Me, Capabilities, Pricing, Tools, or Blog in the nav. No homepage profile, service list, five-layer stack, or priced 14-day offer. Dollar amounts stay off Connect.
