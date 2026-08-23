@@ -7,6 +7,8 @@ import {
   EMPTY_FLAGS_MESSAGE,
   FOOTER_DISCLAIMER,
   NOT_LEGAL_ADVICE,
+  PUNCH_LIST_HEADING,
+  PUNCH_LIST_INTRO,
 } from "@/lib/site-guard/wording";
 
 export function ScannerForm() {
@@ -106,7 +108,8 @@ function Results({ result }: { result: CrawlResult }) {
       </div>
 
       <div className="space-y-4">
-        <h2 className="text-2xl font-medium tracking-tight">Punch list</h2>
+        <h2 className="text-2xl font-medium tracking-tight">{PUNCH_LIST_HEADING}</h2>
+        <p className="max-w-2xl text-sm text-muted">{PUNCH_LIST_INTRO}</p>
         {result.flags.length === 0 ? (
           <p className="max-w-2xl text-lg text-muted">{EMPTY_FLAGS_MESSAGE}</p>
         ) : (

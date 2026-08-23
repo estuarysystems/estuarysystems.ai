@@ -3,12 +3,17 @@ import type { Flag, FlagId } from "./types";
 export const FOOTER_DISCLAIMER =
   "This tool flags publicly visible website patterns that have been associated with US demand letters, private suits, or agency actions. It is not legal advice, not a finding that you have violated any law, and not a prediction that you will be sued. It is not a law firm. Accessibility findings describe possible barriers that can also be genuine access problems for people with disabilities. Consult a licensed attorney about your facts.";
 
+export const SITE_GUARD_NAME = "Site Guard";
+
 export const NOT_LEGAL_ADVICE =
-  "This is not legal advice. Estuary Systems LLC is not a law firm. Findings are risk signals to review.";
+  "Site Guard is not legal advice. Estuary Systems LLC is not a law firm. Findings are risk signals to review.";
 
 export const EMPTY_FLAGS_MESSAGE = "no v1 signals on crawled pages";
 
-export const SITE_GUARD_NAME = "Site Guard";
+export const PUNCH_LIST_HEADING = "Site Guard punch list";
+
+export const PUNCH_LIST_INTRO =
+  "Site Guard lists risk signals to review. Empty results mean no v1 signals on crawled pages, not that a site is fine.";
 
 export const SITE_GUARD_ONE_LINE =
   "Paste a public website URL and get a punch list of risk signals to review.";

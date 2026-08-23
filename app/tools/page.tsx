@@ -21,7 +21,7 @@ export default function ToolsPage() {
             href="/tools/site-guard"
             className="mt-6 inline-flex min-h-12 items-center justify-center border border-ink px-6 py-3 text-sm font-medium text-ink no-underline hover:bg-ink hover:text-paper"
           >
-            Open Site Guard
+            Open {SITE_GUARD_NAME}
           </Link>
         </article>
       </div>
