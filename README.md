@@ -8,7 +8,7 @@ One static Next.js App Router site. Production is Google Cloud Run. Vercel deplo
 
 - `/` — Home: opening line, the walk, first two weeks, conversation CTA
 - `/about` — the only profile page: agency line, bio, stance, suit photo
-- `/alexandria` — search plus four empty shelves
+- `/alexandria` — search plus four shelves (Operations, Writing, Code, Research) and the first public prompt cards
 - `/connect` — scheduling only, Cal.com 15min embed
 - `/privacy` — locked Privacy copy
 - `/terms` — locked Terms copy
@@ -78,7 +78,6 @@ Still empty (do not invent):
 - `[TOOLS FROM GEORGE]`
 - Extra stances beyond the locked line
 - Blog posts
-- Alexandria prompts
 
 The about suit photo is `public/george-about.jpg` and appears on `/about` only. Home has no photos.
 
