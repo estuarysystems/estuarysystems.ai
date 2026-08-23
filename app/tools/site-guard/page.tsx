@@ -20,7 +20,7 @@ export default function SiteGuardPage() {
         <p className="max-w-2xl text-lg text-muted">{SITE_GUARD_ONE_LINE}</p>
         <p className="max-w-2xl text-sm text-muted">{NOT_LEGAL_ADVICE}</p>
         <ScannerForm />
-        <p className="sr-only">{FOOTER_DISCLAIMER}</p>
+        <p className="max-w-2xl text-sm text-muted">{FOOTER_DISCLAIMER}</p>
       </div>
     </main>
   );
