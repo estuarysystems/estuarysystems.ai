@@ -1,0 +1,4 @@
+# Cloud Run packaging only. Keep Vercel on the Next.js test track.
+Dockerfile
+.dockerignore
+cloudbuild.yaml
