@@ -2,7 +2,7 @@
 
 Temporary public company landing for **Estuary Systems LLC**. Spec: 00.11.09.
 
-One static Next.js App Router site. Production is Google Cloud Run. Vercel deploys from the **repo root** for test only. This is not georgelu.ai, EstuaryMC, Conveyor, or intake. Do not attach the real domain to Vercel.
+One static Next.js App Router site. Production is Google Cloud Run. Vercel deploys from the **repo root** for test only (`vercel.json` pins the Next.js framework so the Cloud Run `Dockerfile` is ignored). This is not georgelu.ai, EstuaryMC, Conveyor, or intake. Do not attach the real domain to Vercel.
 
 ## Routes
 
