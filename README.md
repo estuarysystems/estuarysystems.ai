@@ -14,8 +14,9 @@ One static Next.js App Router site. Production is Google Cloud Run. Vercel deplo
 - `/terms` — locked Terms copy
 - `/pricing` — redirects to `/connect`
 - `/capabilities`, `/tools`, `/blog` — unlinked routes; inventory stays off the homepage
+- `/tools` lists Site Guard; `/tools/site-guard` is the free URL scanner (Vercel preview / test only)
 
-No `/ada`. No cookie banner. No backend. No cron. No CMS. No login.
+No `/ada`. No cookie banner. No cron. No CMS. No login. Site Guard’s scan route fetches a public URL for one request and does not archive HTML.
 
 ## Nav
 
@@ -75,9 +76,10 @@ Do not invent these. Filled slots use George’s exact words:
 
 Still empty (do not invent):
 
-- `[TOOLS FROM GEORGE]`
 - Extra stances beyond the locked line
 - Blog posts
+
+`/tools` lists Site Guard only (George greenlit the Vercel test listing). Do not invent other products.
 
 The about suit photo is `public/george-about.jpg` and appears on `/about` only. Home has no photos.
 

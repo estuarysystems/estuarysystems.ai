@@ -78,7 +78,7 @@ export const photos = {
 } as const;
 
 export const slots = {
-  tools: "[TOOLS FROM GEORGE]",
+  tools: "Site Guard",
 } as const;
 
 export const capabilitiesIntro =
@@ -161,7 +161,7 @@ export const capabilities = [
 export const howWeWork =
   "AI can be wrong. Review is part of the design. If a process is repeated and costly, we can usually turn it into a system. If it should stay manual, we say so.";
 
-export const toolsPlaceholder = "Tools and products will be listed here.";
+export const toolsPlaceholder = "Site Guard is listed on /tools.";
 
 export const blogPlaceholder = "Posts will be listed here.";
 
