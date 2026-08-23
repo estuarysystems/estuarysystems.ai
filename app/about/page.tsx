@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { ConversationCta } from "@/components/conversation-cta";
-import { aboutAgency, bio, locked, photos } from "@/lib/content";
+import { aboutAgency, bio, photos } from "@/lib/content";
 
 export const metadata: Metadata = {
   title: "About",
@@ -23,7 +23,6 @@ export default function AboutPage() {
               {aboutAgency}
             </h1>
             <p className="max-w-2xl text-lg text-muted">{bio}</p>
-            <p className="max-w-2xl text-lg">{locked.stanceTeaser}</p>
             <ConversationCta />
           </div>
         </div>
