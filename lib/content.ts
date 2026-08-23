@@ -81,10 +81,6 @@ export const slots = {
   tools: "[TOOLS FROM GEORGE]",
 } as const;
 
-export const locked = {
-  stanceTeaser: "I do not use AI to make pictures.",
-} as const;
-
 export const capabilitiesIntro =
   "Estuary is an AI agency at the intersection of business and engineering. We focus on execution: using current AI tools to get work out the door, and staying current so the work stays efficient.";
 
