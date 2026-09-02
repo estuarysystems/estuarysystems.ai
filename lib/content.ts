@@ -2,8 +2,8 @@ export const site = {
   wordmark: "Estuary Systems",
   legalName: "Estuary Systems LLC",
   domain: "estuarysystems.ai",
-  tagline:
-    "Connecting businesses with technology so people can focus on being people.",
+  tagline: "We're building. Check back later.",
+  oneLiner: "Estuary helps businesses put AI into operations.",
   scheduleLabel: "Schedule time to chat with George",
   scheduleHref: "/connect",
   calEmbedSrc: "https://cal.com/george-lu-ouzdmq/15min?embed=true&theme=light",
@@ -18,12 +18,7 @@ export const bio =
 export const aboutAgency =
   "George Lu runs Estuary Systems LLC in Palo Alto. We are an AI integration and consulting agency. We help businesses put AI into operations so people can stay on the work only people should do.";
 
-export const nav = [
-  { href: "/", label: "Home" },
-  { href: "/about", label: "About" },
-  { href: "/alexandria", label: "Alexandria" },
-  { href: "/connect", label: "Connect" },
-] as const;
+export const nav = [] as const;
 
 export const walk = [
   {
