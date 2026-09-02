@@ -9,7 +9,6 @@ const nextConfig = {
     const parked = [
       "/about",
       "/alexandria",
-      "/connect",
       "/tools",
       "/tools/:path*",
       "/pricing",

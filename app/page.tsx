@@ -1,3 +1,4 @@
+import { ConversationCta } from "@/components/conversation-cta";
 import { site } from "@/lib/content";
 
 export default function HomePage() {
@@ -10,6 +11,7 @@ export default function HomePage() {
           </h1>
           <p className="mt-8 text-lg text-muted">{site.tagline}</p>
           <p className="mt-4 max-w-2xl text-lg text-muted">{site.oneLiner}</p>
+          <ConversationCta className="mt-10" />
         </div>
       </section>
     </main>
