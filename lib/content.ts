@@ -2,14 +2,43 @@ export const site = {
   wordmark: "Estuary Systems",
   legalName: "Estuary Systems LLC",
   domain: "estuarysystems.ai",
-  tagline: "We're building. Check back later.",
-  oneLiner: "Estuary helps businesses put AI into operations.",
+  tagline: "Native AI developer. Operator partner.",
+  oneLiner:
+    "I partner with established operators to accelerate ROI with agentic AI.",
   scheduleLabel: "Schedule time to chat with George",
   scheduleHref: "/connect",
   calEmbedSrc: "https://cal.com/george-lu-ouzdmq/15min?embed=true&theme=light",
   workWithMe: "Work with me",
   ctaLabel: "Start a conversation",
-  ctaHint: "Show us where you’re stuck.",
+  ctaHint: "If you know the systems and the customers, we should talk.",
+} as const;
+
+export const home = {
+  opening:
+    "I love the business of this: providing a service for profit. If we work together, both sides should make money.",
+  tenure: {
+    heading: "Why ten months is the number that matters",
+    paragraphs: [
+      "As of September 2026 I have been developing with AI for about ten months. That is also how long I have been doing software-related work.",
+      "On a traditional resume that sounds short. It tracks the moment agentic AI first connected to tools, persistent workspaces, and GitHub — around November, through harnesses like OpenClaw, then Codex, Claude Code, Hermes, ChatGPT Remote, and Grokbot.",
+      "The models have improved week after week, often day to day. I stay current. Recency and immersion are the competence metric now, not decades of tenure from before agents could do the work.",
+    ],
+  },
+  partners: {
+    heading: "Who I want to partner with",
+    paragraphs: [
+      "People who already operate. You bring knowledge of the systems and the customer connections. I am not looking to invent your domain. I am looking for partners who already have it.",
+    ],
+  },
+  offer: {
+    heading: "What I bring",
+    paragraphs: [
+      "I figure out how AI improves the professional work and the personal work around it, then I execute. You keep the relationships and the judgment. I put agentic AI into the actual work so return shows up sooner.",
+    ],
+  },
+  close: {
+    heading: "If this is you",
+  },
 } as const;
 
 export const bio =

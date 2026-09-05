@@ -1,18 +1,19 @@
 # estuarysystems.ai
 
-Temporary public company landing for **Estuary Systems LLC**. Coming soon (2026-09-02).
+Public company landing for **Estuary Systems LLC**. Native AI developer / operator-partner pitch (2026-09-05).
 
 One static Next.js App Router site. Production is Google Cloud Run. Vercel deploys from the **repo root** for test only (`vercel.json` pins the Next.js framework). This is not georgelu.ai, EstuaryMC, Conveyor, or intake. Do not attach the real domain to Vercel.
 
 ## Routes
 
-- `/` — Coming-soon landing: company name, we’re building, check back later
+- `/` — First-pager: native AI developer positioning, why ten months matters, partner offer, conversation CTA
+- `/connect` — Cal.com schedule embed
 - `/privacy` — existing Privacy copy (footer only)
 - `/terms` — existing Terms copy (footer only)
-- `/about`, `/alexandria`, `/connect`, `/tools`, `/tools/*` — parked; redirect to `/`
+- `/about`, `/alexandria`, `/tools`, `/tools/*` — parked; redirect to `/`
 - `/pricing`, `/capabilities`, `/blog` — parked; redirect to `/`
 
-No product nav. No Cal.com on the homepage. No `/ada`. No cookie banner. No cron. No CMS. No login.
+No product nav. No `/ada`. No cookie banner. No cron. No CMS. No login.
 
 ## Nav
 
@@ -63,4 +64,4 @@ npm run build
 
 ## Locked
 
-Home is coming soon only. Parked product routes redirect to `/`. Keep thin Privacy and Terms. Public-safe copy only: no prices, no Covenant, no client names, no service list, no Cal.com CTA.
+Home is the September 2026 pitch only. Parked product routes redirect to `/`. Keep thin Privacy and Terms. Public-safe copy only: no prices, no Covenant, no client names, no service menu, no rates.
