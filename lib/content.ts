@@ -14,8 +14,6 @@ export const site = {
 } as const;
 
 export const home = {
-  opening:
-    "I love the business of this: providing a service for profit. If we work together, both sides should make money.",
   tenure: {
     heading: "Why ten months is the number that matters",
     paragraphs: [
