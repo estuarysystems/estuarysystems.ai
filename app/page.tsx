@@ -40,7 +40,6 @@ export default function HomePage() {
             {site.tagline}
           </h1>
           <p className="mt-8 max-w-2xl text-lg text-muted">{site.oneLiner}</p>
-          <p className="mt-4 max-w-2xl text-lg text-muted">{home.opening}</p>
           <ConversationCta className="mt-10" />
         </div>
       </section>

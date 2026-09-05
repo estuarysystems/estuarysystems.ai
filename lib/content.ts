@@ -10,30 +10,28 @@ export const site = {
   calEmbedSrc: "https://cal.com/george-lu-ouzdmq/15min?embed=true&theme=light",
   workWithMe: "Work with me",
   ctaLabel: "Start a conversation",
-  ctaHint: "If you know the systems and the customers, we should talk.",
+  ctaHint: "If you run the systems and already have the customers, we should talk.",
 } as const;
 
 export const home = {
-  opening:
-    "I love the business of this: providing a service for profit. If we work together, both sides should make money.",
   tenure: {
-    heading: "Why ten months is the number that matters",
+    heading: "Ten months is the relevant tenure",
     paragraphs: [
-      "As of September 2026 I have been developing with AI for about ten months. That is also how long I have been doing software-related work.",
-      "On a traditional resume that sounds short. It tracks the moment agentic AI first connected to tools, persistent workspaces, and GitHub — around November, through harnesses like OpenClaw, then Codex, Claude Code, Hermes, ChatGPT Remote, and Grokbot.",
-      "The models have improved week after week, often day to day. I stay current. Recency and immersion are the competence metric now, not decades of tenure from before agents could do the work.",
+      "As of September 2026 I have been developing with AI for about ten months — which is also how long I have been developing software.",
+      "On a traditional resume that sounds short. It is not. The clock starts when agentic AI first reached tools, persistent workspaces, and GitHub — around November 2025. OpenClaw opened that door; Codex, Claude Code, and the later harnesses followed.",
+      "The models have improved week after week, often daily. I stay current. Recency and immersion are the competence now, not decades of tenure from before agents could do the work.",
     ],
   },
   partners: {
-    heading: "Who I want to partner with",
+    heading: "Who I partner with",
     paragraphs: [
-      "People who already operate. You bring knowledge of the systems and the customer connections. I am not looking to invent your domain. I am looking for partners who already have it.",
+      "Established operators. You know the systems. You have the customers. I am not looking to invent your domain. I am looking for the people who already have it.",
     ],
   },
   offer: {
-    heading: "What I bring",
+    heading: "What I do",
     paragraphs: [
-      "I figure out how AI improves the professional work and the personal work around it, then I execute. You keep the relationships and the judgment. I put agentic AI into the actual work so return shows up sooner.",
+      "I figure out how AI can improve the work you get paid for — and the work that sits around it — then I execute. You keep the relationships and the judgment. I put agentic AI into the live systems so ROI arrives sooner.",
     ],
   },
   close: {
