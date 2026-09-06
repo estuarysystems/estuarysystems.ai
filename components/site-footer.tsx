@@ -8,6 +8,13 @@ export function SiteFooter() {
         <p>
           Copyright 2026 {site.legalName} |{" "}
           <Link
+            href="/offers"
+            className="underline decoration-ink/20 underline-offset-4 hover:text-ink"
+          >
+            Offers
+          </Link>{" "}
+          |{" "}
+          <Link
             href="/privacy"
             className="underline decoration-ink/20 underline-offset-4 hover:text-ink"
           >

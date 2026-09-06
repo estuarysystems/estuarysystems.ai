@@ -11,6 +11,7 @@ export const site = {
   workWithMe: "Work with me",
   ctaLabel: "Start a conversation",
   ctaHint: "If you run the systems and already have the customers, we should talk.",
+  email: "george@estuarysystems.ai",
 } as const;
 
 export const home = {
@@ -44,6 +45,18 @@ export const bio =
 
 export const aboutAgency =
   "George Lu runs Estuary Systems LLC in Palo Alto. We are an AI integration and consulting agency. We help businesses put AI into operations so people can stay on the work only people should do.";
+
+export const offers = {
+  title: "Offers",
+  heading: "Advisory retainer",
+  lede: "The entry engagement. Two working sessions a month.",
+  price: "$500 / month",
+  cadence: "Two 90-minute calls per month",
+  paragraphs: [
+    "These are advisory sessions — AI and business sense applied to the work you already run. Not a Done-For-You build retainer.",
+    "Higher-touch Done-With-You and build work exists. This is the priced offer for now.",
+  ],
+} as const;
 
 export const nav = [] as const;
 
