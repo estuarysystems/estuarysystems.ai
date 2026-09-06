@@ -8,6 +8,7 @@ One static Next.js App Router site. Production is Google Cloud Run. Vercel deplo
 
 - `/` — First-pager: native AI developer positioning, why ten months matters, partner offer, conversation CTA
 - `/connect` — Cal.com schedule embed
+- `/offers` — Public priced offer (advisory retainer)
 - `/privacy` — existing Privacy copy (footer only)
 - `/terms` — existing Terms copy (footer only)
 - `/about`, `/alexandria`, `/tools`, `/tools/*` — parked; redirect to `/`
@@ -17,7 +18,7 @@ No product nav. No `/ada`. No cookie banner. No cron. No CMS. No login.
 
 ## Nav
 
-Wordmark only. Privacy and Terms stay in the footer.
+Wordmark only. Offers, Privacy, and Terms stay in the footer.
 
 ## Deploy on Vercel
 
@@ -64,4 +65,4 @@ npm run build
 
 ## Locked
 
-Home is the September 2026 pitch only. Parked product routes redirect to `/`. Keep thin Privacy and Terms. Public-safe copy only: no prices, no Covenant, no client names, no service menu, no rates.
+Home is the September 2026 pitch only. Parked product routes redirect to `/`. Keep thin Privacy and Terms. `/offers` is the public priced surface. Public-safe copy only: no Covenant, no client names. Do not invent additional dollar amounts. Do not revive `/pricing`.
