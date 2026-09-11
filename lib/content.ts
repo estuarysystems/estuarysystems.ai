@@ -14,6 +14,9 @@ export const site = {
   email: "george@estuarysystems.ai",
 } as const;
 
+export const homeQuestion =
+  "Interested in building with AI or integrating it into your business?";
+
 export const home = {
   tenure: {
     heading: "Ten months is the relevant tenure",

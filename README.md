@@ -1,24 +1,23 @@
 # estuarysystems.ai
 
-Public company landing for **Estuary Systems LLC**. Native AI developer / operator-partner pitch (2026-09-05).
+Public company landing for **Estuary Systems LLC**. Minimal contact page.
 
 One static Next.js App Router site. Production is Google Cloud Run. Vercel deploys from the **repo root** for test only (`vercel.json` pins the Next.js framework). This is not georgelu.ai, EstuaryMC, Conveyor, or intake. Do not attach the real domain to Vercel.
 
 ## Routes
 
-- `/` — First-pager: native AI developer positioning, why ten months matters, partner offer, conversation CTA
-- `/connect` — Cal.com schedule embed
-- `/offers` — Public priced offer (advisory retainer)
+- `/` — Question plus a contact box (Cal.com 15-minute embed)
+- `/connect` — Cal.com schedule embed (same booking)
 - `/privacy` — existing Privacy copy (footer only)
 - `/terms` — existing Terms copy (footer only)
 - `/about`, `/alexandria`, `/tools`, `/tools/*` — parked; redirect to `/`
-- `/pricing`, `/capabilities`, `/blog` — parked; redirect to `/`
+- `/pricing`, `/capabilities`, `/blog`, `/offers` — parked; redirect to `/`
 
 No product nav. No `/ada`. No cookie banner. No cron. No CMS. No login.
 
 ## Nav
 
-Wordmark only. Offers, Privacy, and Terms stay in the footer.
+Wordmark only. Privacy and Terms stay in the footer.
 
 ## Deploy on Vercel
 
@@ -65,4 +64,4 @@ npm run build
 
 ## Locked
 
-Home is the September 2026 pitch only. Parked product routes redirect to `/`. Keep thin Privacy and Terms. `/offers` is the public priced surface. Public-safe copy only: no Covenant, no client names. Do not invent additional dollar amounts. Do not revive `/pricing`.
+Home is the question plus the Cal.com contact box only. Parked product and offer routes redirect to `/`. Keep thin Privacy and Terms. Public-safe copy only: no Covenant, no client names. Do not invent additional dollar amounts. Do not revive `/pricing`.
