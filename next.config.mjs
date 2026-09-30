@@ -14,7 +14,6 @@ const nextConfig = {
       "/pricing",
       "/capabilities",
       "/blog",
-      "/offers",
     ];
 
     return parked.map((source) => ({
