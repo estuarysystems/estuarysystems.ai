@@ -8,10 +8,11 @@ One static Next.js App Router site. Production is Google Cloud Run. Vercel deplo
 
 - `/` — Question plus a contact box (Cal.com 15-minute embed)
 - `/connect` — Cal.com schedule embed (same booking)
+- `/offers` — Advisory retainer and fixed-scope project
 - `/privacy` — existing Privacy copy (footer only)
 - `/terms` — existing Terms copy (footer only)
 - `/about`, `/alexandria`, `/tools`, `/tools/*` — parked; redirect to `/`
-- `/pricing`, `/capabilities`, `/blog`, `/offers` — parked; redirect to `/`
+- `/pricing`, `/capabilities`, `/blog` — parked; redirect to `/`
 
 No product nav. No `/ada`. No cookie banner. No cron. No CMS. No login.
 
@@ -64,4 +65,4 @@ npm run build
 
 ## Locked
 
-Home is the question plus the Cal.com contact box only. Parked product and offer routes redirect to `/`. Keep thin Privacy and Terms. Public-safe copy only: no Covenant, no client names. Do not invent additional dollar amounts. Do not revive `/pricing`.
+Home is the question plus the Cal.com contact box only. Parked product routes redirect to `/`. `/offers` is the public offer surface. Keep thin Privacy and Terms. Public-safe copy only: no Covenant, no client names. Do not invent additional dollar amounts. Do not revive `/pricing`.

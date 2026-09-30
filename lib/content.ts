@@ -49,17 +49,60 @@ export const bio =
 export const aboutAgency =
   "George Lu runs Estuary Systems LLC in Palo Alto. We are an AI integration and consulting agency. We help businesses put AI into operations so people can stay on the work only people should do.";
 
+export type Offer = {
+  id: string;
+  heading: string;
+  lede: string;
+  price: string;
+  cadence: string;
+  paragraphs: readonly string[];
+  steps?: readonly string[];
+  include?: string;
+  mailtoSubject?: string;
+};
+
 export const offers = {
   title: "Offers",
-  heading: "Advisory retainer",
-  lede: "The entry engagement. Two working sessions a month.",
-  price: "$500 / month",
-  cadence: "Two 90-minute calls per month",
-  paragraphs: [
-    "These are advisory sessions — AI and business sense applied to the work you already run. Not a Done-For-You build retainer.",
-    "Higher-touch Done-With-You and build work exists. This is the priced offer for now.",
+  description:
+    "Advisory retainer, $500 / month. Fixed-scope project, quoted per project.",
+  lede: "A monthly retainer, or a defined build with a fixed price.",
+  items: [
+    {
+      id: "advisory-retainer",
+      heading: "Advisory retainer",
+      lede: "The entry engagement. Two working sessions a month.",
+      price: "$500 / month",
+      cadence: "Two 90-minute calls per month",
+      paragraphs: [
+        "These are advisory sessions — AI and business sense applied to the work you already run. Not a Done-For-You build retainer.",
+        "A defined build is a separate engagement, quoted on its own.",
+      ],
+    },
+    {
+      id: "fixed-scope-project",
+      heading: "Fixed-scope project",
+      lede: "A defined AI build with a clear finish line. Not ongoing advisory.",
+      price: "Custom quote",
+      cadence: "Quoted per project",
+      paragraphs: [
+        "A tool, workflow, integration, internal app, or landing page. You know what done looks like.",
+      ],
+      steps: [
+        "Send the specs.",
+        "We quote a fixed price.",
+        "We build to that scope.",
+      ],
+      include:
+        "In your note: the goal, the constraints, the deadline, and any links.",
+      mailtoSubject: "Project specs",
+    },
   ],
-} as const;
+} as const satisfies {
+  title: string;
+  description: string;
+  lede: string;
+  items: readonly Offer[];
+};
 
 export const nav = [] as const;
 
