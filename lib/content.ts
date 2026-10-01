@@ -104,7 +104,10 @@ export const offers = {
   items: readonly Offer[];
 };
 
-export const nav = [] as const;
+export const nav = [
+  { href: "/offers", label: "Offers" },
+  { href: "/use-cases", label: "Use cases" },
+] as const;
 
 export const walk = [
   {
