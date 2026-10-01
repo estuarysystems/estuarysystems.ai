@@ -1,8 +1,8 @@
 export const useCasesPage = {
   title: "Use cases",
   description:
-    "Systems intelligence for intake, drafting, filing, and the work around them.",
-  lede: "Systems intelligence for intake, drafting, filing, and the work around them.",
+    "Systems intelligence for intake, drafting, and the work around them.",
+  lede: "Systems intelligence for intake, drafting, and the work around them.",
   draftingLine: "One flow, in order.",
 } as const;
 
@@ -78,18 +78,6 @@ export const useCasePackages: readonly UseCasePackage[] = [
     ],
   },
   {
-    id: "filing",
-    name: "Filing",
-    accent: "#3D8F68",
-    presentation: "cards",
-    modules: [
-      {
-        title: "Delegated Filing Handoff",
-        example: "Upload the final document and tag an owner",
-      },
-    ],
-  },
-  {
     id: "platform",
     name: "Platform",
     accent: "#C48A62",
@@ -97,11 +85,7 @@ export const useCasePackages: readonly UseCasePackage[] = [
     modules: [
       {
         title: "Team Messaging Automation",
-        example: "Bots hand off work in Slack",
-      },
-      {
-        title: "Safe System Updates",
-        example: "Safe deploy of bot tooling",
+        example: "Bots for different employees message each other to retrieve info",
       },
     ],
   },
@@ -133,7 +117,7 @@ export const useCasePackages: readonly UseCasePackage[] = [
     modules: [
       {
         title: "Documentation Email Intake",
-        example: "Forward docs@ → database row",
+        example: "A bot sorts incoming email and acts, automatically or after approval",
         badge: "Time saved 5 min/task",
       },
     ],
