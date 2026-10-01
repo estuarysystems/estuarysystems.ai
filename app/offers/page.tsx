@@ -5,6 +5,9 @@ import { offers, site, type Offer } from "@/lib/content";
 export const metadata: Metadata = {
   title: offers.title,
   description: offers.description,
+  openGraph: {
+    description: offers.description,
+  },
 };
 
 function mailtoHref(offer: Offer) {
@@ -26,6 +29,7 @@ export default function OffersPage() {
         <div className="mt-16 grid gap-6 md:grid-cols-2">
           {offers.items.map((offer) => {
             const steps = "steps" in offer ? offer.steps : undefined;
+            const rates = "rates" in offer ? offer.rates : undefined;
             const include = "include" in offer ? offer.include : undefined;
 
             return (
@@ -55,6 +59,15 @@ export default function OffersPage() {
                     </p>
                   ))}
                 </div>
+                {rates ? (
+                  <ul className="mt-10 space-y-3 text-lg text-muted">
+                    {rates.map((rate) => (
+                      <li key={rate} className="leading-relaxed">
+                        {rate}
+                      </li>
+                    ))}
+                  </ul>
+                ) : null}
                 {steps ? (
                   <ol className="mt-10 space-y-3 text-lg text-muted">
                     {steps.map((step, index) => (

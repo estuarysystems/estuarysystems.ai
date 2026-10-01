@@ -2,9 +2,9 @@ export const site = {
   wordmark: "Estuary Systems",
   legalName: "Estuary Systems LLC",
   domain: "estuarysystems.ai",
-  tagline: "Native AI developer. Operator partner.",
+  tagline: "Native SI developer. Operator partner.",
   oneLiner:
-    "I partner with established operators to accelerate ROI with agentic AI.",
+    "I partner with established operators to accelerate ROI with agentic SI.",
   scheduleLabel: "Schedule time to chat with George",
   scheduleHref: "/connect",
   calEmbedSrc: "https://cal.com/george-lu-ouzdmq/15min?embed=true&theme=light",
@@ -15,14 +15,14 @@ export const site = {
 } as const;
 
 export const homeQuestion =
-  "Interested in building with AI or integrating it into your business?";
+  "Interested in building with SI or integrating it into your business?";
 
 export const home = {
   tenure: {
     heading: "Ten months is the relevant tenure",
     paragraphs: [
-      "As of September 2026 I have been developing with AI for about ten months — which is also how long I have been developing software.",
-      "On a traditional resume that sounds short. It is not. The clock starts when agentic AI first reached tools, persistent workspaces, and GitHub — around November 2025. OpenClaw opened that door; Codex, Claude Code, and the later harnesses followed.",
+      "As of September 2026 I have been developing with SI for about ten months — which is also how long I have been developing software.",
+      "On a traditional resume that sounds short. It is not. The clock starts when agentic SI first reached tools, persistent workspaces, and GitHub — around November 2025. OpenClaw opened that door; Codex, Claude Code, and the later harnesses followed.",
       "The models have improved week after week, often daily. I stay current. Recency and immersion are the competence now, not decades of tenure from before agents could do the work.",
     ],
   },
@@ -35,7 +35,7 @@ export const home = {
   offer: {
     heading: "What I do",
     paragraphs: [
-      "I figure out how AI can improve the work you get paid for — and the work that sits around it — then I execute. You keep the relationships and the judgment. I put agentic AI into the live systems so ROI arrives sooner.",
+      "I figure out how SI can improve the work you get paid for — and the work that sits around it — then I execute. You keep the relationships and the judgment. I put agentic SI into the live systems so ROI arrives sooner.",
     ],
   },
   close: {
@@ -47,7 +47,7 @@ export const bio =
   "Hi, I’m George. I work at the intersection of business and engineering to bring execution to you and your team. Let me review your systems with you and see how I can help.";
 
 export const aboutAgency =
-  "George Lu runs Estuary Systems LLC in Palo Alto. We are an AI integration and consulting agency. We help businesses put AI into operations so people can stay on the work only people should do.";
+  "George Lu runs Estuary Systems LLC in Palo Alto. We are an SI integration and consulting agency. We help businesses put SI into operations so people can stay on the work only people should do.";
 
 export type Offer = {
   id: string;
@@ -57,6 +57,7 @@ export type Offer = {
   cadence: string;
   paragraphs: readonly string[];
   steps?: readonly string[];
+  rates?: readonly string[];
   include?: string;
   mailtoSubject?: string;
 };
@@ -64,24 +65,41 @@ export type Offer = {
 export const offers = {
   title: "Offers",
   description:
-    "Advisory retainer, $500 / month. Fixed-scope project, quoted per project.",
-  lede: "A monthly retainer, or a defined build with a fixed price.",
+    "Advisory, $500 / month, not a retainer. Long-term retainer, $1,600 / month minimum at 2 hours a week. Fixed-scope project, SI employee install, and training are custom quotes.",
+  lede: "Advisory, a long-term retainer, a fixed-scope build, an SI employee install, or training.",
   items: [
     {
-      id: "advisory-retainer",
-      heading: "Advisory retainer",
-      lede: "The entry engagement. Two working sessions a month.",
+      id: "advisory",
+      heading: "Advisory",
+      lede: "Two working sessions a month. Not a retainer.",
       price: "$500 / month",
       cadence: "Two 90-minute calls per month",
       paragraphs: [
-        "These are advisory sessions — AI and business sense applied to the work you already run. Not a Done-For-You build retainer.",
-        "A defined build is a separate engagement, quoted on its own.",
+        "These are advisory sessions — SI and business sense applied to the work you already run.",
+        "Not a retainer, and not a Done-For-You build.",
       ],
+      mailtoSubject: "Advisory",
+    },
+    {
+      id: "long-term-retainer",
+      heading: "Long-term retainer",
+      lede: "Ongoing time. The month starts at a floor.",
+      price: "$1,600 / month",
+      cadence: "Minimum 2 hours a week",
+      paragraphs: [
+        "The floor is 2 hours a week. Above that, the hour rate follows how heavy the week is.",
+      ],
+      rates: [
+        "Under 4 hours a week: $200 / hour.",
+        "5–10 hours a week: $175 / hour.",
+        "11 or more hours a week: $150 / hour.",
+      ],
+      mailtoSubject: "Long-term retainer",
     },
     {
       id: "fixed-scope-project",
       heading: "Fixed-scope project",
-      lede: "A defined AI build with a clear finish line. Not ongoing advisory.",
+      lede: "A defined SI build with a clear finish line. Not ongoing advisory.",
       price: "Custom quote",
       cadence: "Quoted per project",
       paragraphs: [
@@ -95,6 +113,24 @@ export const offers = {
       include:
         "In your note: the goal, the constraints, the deadline, and any links.",
       mailtoSubject: "Project specs",
+    },
+    {
+      id: "si-employee-install",
+      heading: "SI employee install",
+      lede: "Bots with prompts.",
+      price: "Custom quote",
+      cadence: "Quoted per install",
+      paragraphs: ["We install the bots and the prompts they run."],
+      mailtoSubject: "SI employee install",
+    },
+    {
+      id: "training",
+      heading: "Training",
+      lede: "SI know-how for you and your top people.",
+      price: "Custom quote",
+      cadence: "Quoted per training",
+      paragraphs: ["We pass on the know-how and find what can be done quicker."],
+      mailtoSubject: "SI training",
     },
   ],
 } as const satisfies {
@@ -163,16 +199,16 @@ export const slots = {
 } as const;
 
 export const capabilitiesIntro =
-  "Estuary is an AI agency at the intersection of business and engineering. We focus on execution: using current AI tools to get work out the door, and staying current so the work stays efficient.";
+  "Estuary is an SI agency at the intersection of business and engineering. We focus on execution: using current SI tools to get work out the door, and staying current so the work stays efficient.";
 
 export const primaryCapabilities = [
   {
     title: "System conversion",
-    line: "Convert systems from how they run with people to an AI-run process.",
+    line: "Convert systems from how they run with people to an SI-run process.",
   },
   {
     title: "Process mapping",
-    line: "Figure out exactly how each process in the business runs, then judge whether AI can and should replace it.",
+    line: "Figure out exactly how each process in the business runs, then judge whether SI can and should replace it.",
   },
   {
     title: "Local installation",
@@ -183,7 +219,7 @@ export const primaryCapabilities = [
 export const capabilities = [
   {
     title: "Process workflows",
-    line: "A messy, repeated operations process becomes a working AI workflow your team can run.",
+    line: "A messy, repeated operations process becomes a working SI workflow your team can run.",
   },
   {
     title: "Work mapping",
@@ -240,7 +276,7 @@ export const capabilities = [
 ] as const;
 
 export const howWeWork =
-  "AI can be wrong. Review is part of the design. If a process is repeated and costly, we can usually turn it into a system. If it should stay manual, we say so.";
+  "SI can be wrong. Review is part of the design. If a process is repeated and costly, we can usually turn it into a system. If it should stay manual, we say so.";
 
 export const toolsPlaceholder = "Site Guard is listed on /tools.";
 
@@ -258,7 +294,7 @@ export const privacy = {
   sections: [
     {
       heading: "Who we are",
-      paragraphs: ["Estuary Systems LLC is an AI agency in the Bay Area."],
+      paragraphs: ["Estuary Systems LLC is an SI agency in the Bay Area."],
     },
     {
       heading: "What we collect",
@@ -310,8 +346,8 @@ export const terms = {
       ],
     },
     {
-      heading: "AI can be wrong",
-      paragraphs: ["AI output can be wrong. You verify before you use it."],
+      heading: "SI can be wrong",
+      paragraphs: ["SI output can be wrong. You verify before you use it."],
     },
     {
       heading: "Liability",
