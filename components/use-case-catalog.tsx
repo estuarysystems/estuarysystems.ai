@@ -28,13 +28,6 @@ function ModuleCopy({
         ) : null}
       </div>
       <p className="mt-2 text-sm leading-relaxed text-[var(--uc-ash)]">{item.example}</p>
-      <p
-        className={`mt-3 font-mono text-xs leading-relaxed tracking-tight ${
-          item.mark === "signal" ? "text-[var(--uc-signal)]" : "text-[var(--uc-bone)]"
-        }`}
-      >
-        {item.whatItDoes}
-      </p>
     </>
   );
 }

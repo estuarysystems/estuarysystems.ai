@@ -9,12 +9,9 @@ export const useCasesPage = {
 export type UseCaseModule = {
   title: string;
   example: string;
-  whatItDoes: string;
   badge?: string;
   /** Consecutive modules with the same pair sit side by side. */
   pair?: string;
-  /** The costlier half of a pair. Rendered in the signal accent. */
-  mark?: "signal";
 };
 
 export type UseCasePackage = {
@@ -37,39 +34,21 @@ export const useCasePackages: readonly UseCasePackage[] = [
     modules: [
       {
         title: "Intake Automation",
-        example: "Law firm pulls client PDFs from Drive",
-        whatItDoes: "Pulls, stores, and routes incoming files.",
+        example: "A business pulls incoming PDFs from Drive",
       },
       {
         title: "Filename Routing",
         example: "Files named INV-2024.pdf go to Invoices",
-        whatItDoes: "Cheap. No PDF read.",
         pair: "routing",
       },
       {
         title: "File Content Routing",
         example: "Blank-named PDFs sorted by reading them",
-        whatItDoes: "Reads the PDF. Costlier.",
         pair: "routing",
-        mark: "signal",
       },
       {
         title: "Case Database",
-        example: "Private DB for cases and contacts",
-        whatItDoes: "Cases, contacts, and files in one place.",
-      },
-    ],
-  },
-  {
-    id: "work-routing",
-    name: "Work routing",
-    accent: "#A394B8",
-    presentation: "cards",
-    modules: [
-      {
-        title: "SI Work Orchestration",
-        example: "Queue next step to one SI bot",
-        whatItDoes: "Packages work and assigns one worker.",
+        example: "A private database for records and contacts",
       },
     ],
   },
@@ -82,33 +61,19 @@ export const useCasePackages: readonly UseCasePackage[] = [
     modules: [
       {
         title: "Drafting Packet Preparation",
-        example: "Build packet before drafting a letter",
-        whatItDoes: "Template + instructions + facts together.",
+        example: "Assemble a packet before drafting a document",
       },
       {
         title: "Document Drafting Automation",
-        example: "Fill a demand letter template",
-        whatItDoes: "Fills placeholders. Draft for review.",
+        example: "Generate a draft from a template",
       },
       {
         title: "Automated Document Review",
-        example: "Check draft vs source facts",
-        whatItDoes: "Pass/fail vs source for a human.",
-      },
-      {
-        title: "Document-Type Worker Routing",
-        example: "Send discovery docs to the discovery bot",
-        whatItDoes: "Right worker per document type.",
-      },
-      {
-        title: "Smart Template Selection",
-        example: "Pick singular vs plural template",
-        whatItDoes: "Chooses the right template.",
+        example: "Flag a draft against the source",
       },
       {
         title: "Human Review Handoff",
-        example: "Attorney reviews finished draft",
-        whatItDoes: "Draft + notes to a person.",
+        example: "Forwards the document to a human for review by message or email",
       },
     ],
   },
@@ -120,8 +85,7 @@ export const useCasePackages: readonly UseCasePackage[] = [
     modules: [
       {
         title: "Delegated Filing Handoff",
-        example: "Upload final doc and tag owner",
-        whatItDoes: "Upload, status, tag owner.",
+        example: "Upload the final document and tag an owner",
       },
     ],
   },
@@ -134,12 +98,10 @@ export const useCasePackages: readonly UseCasePackage[] = [
       {
         title: "Team Messaging Automation",
         example: "Bots hand off work in Slack",
-        whatItDoes: "Assistants talk over Slack.",
       },
       {
         title: "Safe System Updates",
         example: "Safe deploy of bot tooling",
-        whatItDoes: "Backups, pins, health checks.",
       },
     ],
   },
@@ -152,17 +114,14 @@ export const useCasePackages: readonly UseCasePackage[] = [
       {
         title: "Product Development Workflow",
         example: "Idea → shipped feature",
-        whatItDoes: "Spec → build → verify → release.",
       },
       {
         title: "Software Delivery Standards",
         example: "One delivery checklist for the team",
-        whatItDoes: "Plan through monitor lifecycle.",
       },
       {
         title: "Technology Risk Management",
         example: "Risk check before a release",
-        whatItDoes: "Risk checks beside delivery.",
       },
     ],
   },
@@ -175,7 +134,6 @@ export const useCasePackages: readonly UseCasePackage[] = [
       {
         title: "Documentation Email Intake",
         example: "Forward docs@ → database row",
-        whatItDoes: "Inbox writes the database.",
         badge: "Time saved 5 min/task",
       },
     ],
@@ -189,12 +147,10 @@ export const useCasePackages: readonly UseCasePackage[] = [
       {
         title: "Project Dashboard",
         example: "See hours saved this week",
-        whatItDoes: "Hours saved, bottlenecks, human vs bot.",
       },
       {
         title: "Cost Log",
         example: "Log daily model spend",
-        whatItDoes: "Daily cost log for models and tools.",
       },
     ],
   },
@@ -208,22 +164,18 @@ export const useCasePackages: readonly UseCasePackage[] = [
       {
         title: "Client Intake Form",
         example: "New client fill-out form",
-        whatItDoes: "Form → clean summary + missing info.",
       },
       {
         title: "Training Video Pipeline",
         example: "SOP row → training video script",
-        whatItDoes: "Sheet row → brief, script, shot list.",
       },
       {
         title: "Price Watch",
         example: "Flag cards underpriced by $5+",
-        whatItDoes: "Watches prices; flags buy/sell gaps.",
       },
       {
         title: "Website Risk Scan",
-        example: "Scan a company site for lawsuit risk",
-        whatItDoes: "Scans a site against common risk patterns.",
+        example: "Scan a business site for common risks",
       },
     ],
   },
