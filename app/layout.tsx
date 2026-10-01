@@ -21,6 +21,9 @@ export const metadata: Metadata = {
     template: `%s · ${site.wordmark}`,
   },
   description: homeQuestion,
+  openGraph: {
+    description: homeQuestion,
+  },
   metadataBase: new URL("https://estuarysystems.ai"),
 };
 

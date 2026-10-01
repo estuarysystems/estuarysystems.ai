@@ -8,7 +8,7 @@ One static Next.js App Router site. Production is Google Cloud Run. Vercel deplo
 
 - `/` — Question plus a contact box (Cal.com 15-minute embed)
 - `/connect` — Cal.com schedule embed (same booking)
-- `/offers` — Advisory retainer and fixed-scope project
+- `/offers` — Advisory, long-term retainer, fixed-scope project, SI employee install, and training
 - `/privacy` — existing Privacy copy (footer only)
 - `/terms` — existing Terms copy (footer only)
 - `/about`, `/alexandria`, `/tools`, `/tools/*` — parked; redirect to `/`

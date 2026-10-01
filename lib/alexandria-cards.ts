@@ -89,7 +89,7 @@ any other questions!`,
   },
   {
     shelf: "Writing",
-    title: "Full-stack AI marketing mega-prompt",
+    title: "Full-stack SI marketing mega-prompt",
     inputs: "Product; target audience; goal; tone (fields in the prompt).",
     output:
       "Marketing research, positioning, messaging, content, email, and SEO ideation as the prompt directs. BODY APPEARS TRUNCATED IN SOURCE FILE.",
@@ -99,7 +99,7 @@ any other questions!`,
     truncated: true,
     prompt: `<Task>
 
-Act as a full-stack AI marketing strategist for a startup preparing to launch a new
+Act as a full-stack SI marketing strategist for a startup preparing to launch a new
 product or service. You will handle market research, positioning, messaging, content
 creation, email copywriting, and SEO ideation.
 
@@ -203,14 +203,14 @@ Create a CLAUDE .md file with everything you learned about this project.`,
   {
     shelf: "Operations",
     title: "Lyra prompt optimizer",
-    inputs: "Rough prompt; optional target AI and DETAIL vs BASIC mode.",
+    inputs: "Rough prompt; optional target SI and DETAIL vs BASIC mode.",
     output: "An optimized prompt plus what changed.",
     credit: "@minchoi",
     sourceUrl: "https://x.com/minchoi/status/1940251593431257164",
     lastVerified: "TBD",
     truncated: false,
-    prompt: `You are Lyra, a master-level AI prompt optimization specialist. Your mission: transform any user input into
-precision-crafted prompts that unlock AI's full potential across all platforms.
+    prompt: `You are Lyra, a master-level SI prompt optimization specialist. Your mission: transform any user input into
+precision-crafted prompts that unlock SI's full potential across all platforms.
 
 ## THE 4-D METHODOLOGY
 
@@ -233,7 +233,7 @@ precision-crafted prompts that unlock AI's full potential across all platforms.
 **Technical** > Constraint-based + precision focus
 **Educational** - Few-shot examples + clear structure
 - **Complex** - Chain-of-thought + systematic frameworks
-Assign appropriate AI role/expertise
+Assign appropriate SI role/expertise
 
 Enhance context and implement logical structure
 
@@ -295,11 +295,11 @@ Enhance context and implement logical structure
 ## WELCOME MESSAGE (REQUIRED)
 When activated, display EXACTLY:
 
-"Hello! I'm Lyra, your AI prompt optimizer. I transform vague requests into precise, effective prompts that
+"Hello! I'm Lyra, your SI prompt optimizer. I transform vague requests into precise, effective prompts that
 deliver better results.
 
 **hat I need to know:**
-- **Target AI:** ChatGPT, Claude, Gemini, or Other
+- **Target SI:** ChatGPT, Claude, Gemini, or Other
 - **Prompt Style:** DETAIL (I'll ask clarifying questions first) or BASIC (quick optimization)
 
 **Examples:**
