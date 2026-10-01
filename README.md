@@ -6,9 +6,9 @@ One static Next.js App Router site. Production is Google Cloud Run. Vercel deplo
 
 ## Routes
 
-- `/` — Question plus a contact box (Cal.com 15-minute embed)
-- `/connect` — Cal.com schedule embed (same booking)
-- `/offers` — Advisory retainer and fixed-scope project
+- `/` — Who it’s for, what SI means, flagship module chips, walk, CTA, Cal.com below the fold
+- `/connect` — Short trust lines, then the Cal.com schedule embed
+- `/offers` — Advisory ($500/month, not a retainer), long-term retainer ($1,600/month minimum at 2 hours a week; $200, $175, and $150 hour rates), fixed-scope project, SI employee install, and SI training
 - `/privacy` — existing Privacy copy (footer only)
 - `/terms` — existing Terms copy (footer only)
 - `/about`, `/alexandria`, `/tools`, `/tools/*` — parked; redirect to `/`
@@ -65,4 +65,8 @@ npm run build
 
 ## Locked
 
-Home is the question plus the Cal.com contact box only. Parked product routes redirect to `/`. `/offers` is the public offer surface. Keep thin Privacy and Terms. Public-safe copy only: no Covenant, no client names. Do not invent additional dollar amounts. Do not revive `/pricing`.
+Public frame is SI (systems intelligence), not AI.
+
+Home names who it’s for, what SI means here (intake, drafting, and the work around them), four flagship modules, the walk, and a path to `/connect`. The Cal.com box stays below that. `/offers` is the commercial ladder: advisory at $500/month is not a retainer; the long-term retainer floors at 2 hours a week and $1,600/month, with hour rates of $200 (under 4 hours a week), $175 (5–10), and $150 (11 or more). Fixed-scope project, SI employee install, and SI training are custom quotes. `/use-cases` stays thin. `/connect` carries a short trust strip, then the booker.
+
+Parked product routes redirect to `/`. Do not unpark the capabilities list or the blog. No case studies, client brands, logos, or invented metrics. Keep thin Privacy and Terms. Public-safe copy only: no Covenant, no client names. Do not revive `/pricing`. Do not add prices outside that ladder.

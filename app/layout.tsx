@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import { SiteFooter } from "@/components/site-footer";
 import { SiteHeader } from "@/components/site-header";
-import { homeQuestion, site } from "@/lib/content";
+import { homePage, site } from "@/lib/content";
 import "./globals.css";
 
 const geistSans = Geist({
@@ -20,7 +20,10 @@ export const metadata: Metadata = {
     default: site.wordmark,
     template: `%s · ${site.wordmark}`,
   },
-  description: homeQuestion,
+  description: homePage.description,
+  openGraph: {
+    description: homePage.description,
+  },
   metadataBase: new URL("https://estuarysystems.ai"),
 };
 

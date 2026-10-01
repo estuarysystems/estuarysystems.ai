@@ -22,8 +22,25 @@ export type UseCasePackage = {
   presentation: "cards" | "flow";
   density?: "tight";
   line?: string;
+  /** Problem, then the fix. Intake and Document drafting only. */
+  lede?: string;
+  startHere?: boolean;
   modules: readonly UseCaseModule[];
 };
+
+export function moduleId(title: string) {
+  return title
+    .toLowerCase()
+    .replace(/[^a-z0-9]+/g, "-")
+    .replace(/^-+|-+$/g, "");
+}
+
+export const flagshipModules = [
+  "Intake Automation",
+  "File Content Routing",
+  "Document Drafting Automation",
+  "Bots fetch info across teams",
+] as const;
 
 export const useCasePackages: readonly UseCasePackage[] = [
   {
@@ -31,6 +48,8 @@ export const useCasePackages: readonly UseCasePackage[] = [
     name: "Intake",
     accent: "#8AADD4",
     presentation: "cards",
+    startHere: true,
+    lede: "Incoming files have no place yet. Pull them, then route by filename or by reading the file.",
     modules: [
       {
         title: "Intake Automation",
@@ -58,6 +77,8 @@ export const useCasePackages: readonly UseCasePackage[] = [
     accent: "#8FB89A",
     presentation: "flow",
     line: useCasesPage.draftingLine,
+    startHere: true,
+    lede: "A draft needs a source and a person. Prepare the packet, generate the draft, check it, then hand it off.",
     modules: [
       {
         title: "Drafting Packet Preparation",
@@ -84,7 +105,7 @@ export const useCasePackages: readonly UseCasePackage[] = [
     presentation: "cards",
     modules: [
       {
-        title: "Team Messaging Automation",
+        title: "Bots fetch info across teams",
         example: "Bots for different employees message each other to retrieve info",
       },
     ],
@@ -160,3 +181,13 @@ export const useCasePackages: readonly UseCasePackage[] = [
     ],
   },
 ];
+
+const catalogTitles = new Set(
+  useCasePackages.flatMap((pkg) => pkg.modules.map((item) => item.title)),
+);
+
+for (const title of flagshipModules) {
+  if (!catalogTitles.has(title)) {
+    throw new Error(`Flagship module missing from the catalog: ${title}`);
+  }
+}
