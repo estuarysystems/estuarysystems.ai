@@ -4,19 +4,37 @@ import {
   type UseCasePackage,
 } from "@/lib/use-cases";
 
-function ModuleCopy({ item }: { item: UseCaseModule }) {
+function ModuleCopy({
+  item,
+  dense = false,
+}: {
+  item: UseCaseModule;
+  dense?: boolean;
+}) {
   return (
     <>
-      <div className="flex flex-wrap items-baseline justify-between gap-x-3 gap-y-1">
-        <h3 className="text-base font-medium tracking-tight">{item.title}</h3>
+      <div className="flex flex-wrap items-baseline justify-between gap-x-4 gap-y-2">
+        <h3
+          className={`font-medium tracking-[-0.03em] text-[var(--uc-bone)] ${
+            dense ? "text-base" : "text-lg md:text-xl"
+          }`}
+        >
+          {item.title}
+        </h3>
         {item.badge ? (
-          <span className="border border-line px-1.5 py-0.5 text-xs text-muted">
+          <span className="border border-[var(--uc-line)] px-1.5 py-0.5 font-mono text-[10px] uppercase tracking-[0.14em] text-[var(--uc-ash)]">
             {item.badge}
           </span>
         ) : null}
       </div>
-      <p className="mt-2 text-sm leading-relaxed text-muted">{item.example}</p>
-      <p className="mt-1 text-sm leading-relaxed">{item.whatItDoes}</p>
+      <p className="mt-2 text-sm leading-relaxed text-[var(--uc-ash)]">{item.example}</p>
+      <p
+        className={`mt-3 font-mono text-xs leading-relaxed tracking-tight ${
+          item.mark === "signal" ? "text-[var(--uc-signal)]" : "text-[var(--uc-bone)]"
+        }`}
+      >
+        {item.whatItDoes}
+      </p>
     </>
   );
 }
@@ -24,16 +42,20 @@ function ModuleCopy({ item }: { item: UseCaseModule }) {
 function ModuleCard({
   item,
   accent,
+  className = "",
+  dense = false,
 }: {
   item: UseCaseModule;
   accent: string;
+  className?: string;
+  dense?: boolean;
 }) {
   return (
     <article
-      className="border border-line border-l-2 bg-paper px-5 py-5"
+      className={`use-cases-panel border-l-[3px] px-5 ${dense ? "py-4" : "py-5"} ${className}`}
       style={{ borderLeftColor: accent }}
     >
-      <ModuleCopy item={item} />
+      <ModuleCopy item={item} dense={dense} />
     </article>
   );
 }
@@ -66,19 +88,27 @@ function cardChunks(modules: readonly UseCaseModule[]) {
 
 function PackageCards({ pkg }: { pkg: UseCasePackage }) {
   const chunks = cardChunks(pkg.modules);
+  const dense = pkg.density === "tight";
 
   return (
-    <div className="mt-6 space-y-3">
-      {chunks.map((items) => (
-        <div
-          key={items.map((item) => item.title).join("|")}
-          className="grid gap-3 md:grid-cols-2"
-        >
-          {items.map((item) => (
-            <ModuleCard key={item.title} item={item} accent={pkg.accent} />
-          ))}
-        </div>
-      ))}
+    <div className={dense ? "grid gap-2 sm:grid-cols-2" : "grid gap-3 md:grid-cols-2"}>
+      {chunks.flatMap((items) =>
+        items.map((item, index) => {
+          const spansRow =
+            !dense &&
+            (items.length === 1 ||
+              (items.length % 2 === 1 && index === items.length - 1));
+          return (
+            <ModuleCard
+              key={item.title}
+              item={item}
+              accent={pkg.accent}
+              dense={dense}
+              className={spansRow ? "md:col-span-2" : ""}
+            />
+          );
+        }),
+      )}
     </div>
   );
 }
@@ -86,17 +116,23 @@ function PackageCards({ pkg }: { pkg: UseCasePackage }) {
 function PackageFlow({ pkg }: { pkg: UseCasePackage }) {
   return (
     <div
-      className="mt-6 border border-line border-t-2 bg-paper px-5 md:px-8"
-      style={{ borderTopColor: pkg.accent }}
+      className="use-cases-panel border-l-[3px]"
+      style={{ borderLeftColor: pkg.accent }}
     >
+      {pkg.line ? (
+        <p className="border-b border-[var(--uc-line)] px-5 py-3 font-mono text-[11px] uppercase tracking-[0.16em] text-[var(--uc-ash)]">
+          {pkg.line}
+        </p>
+      ) : null}
       <ol>
         {pkg.modules.map((item, index) => (
           <li
             key={item.title}
-            className="grid grid-cols-[1.5rem_minmax(0,1fr)] gap-x-3 border-t border-line py-5 first:border-t-0"
+            className="use-cases-step grid grid-cols-[2.5rem_minmax(0,1fr)] gap-x-3 border-t border-[var(--uc-line)] px-5 py-5 first:border-t-0 md:gap-x-5"
+            style={{ animationDelay: `${index * 40}ms` }}
           >
-            <span className="pt-0.5 text-sm text-muted tabular-nums">
-              {index + 1}
+            <span className="pt-1 font-mono text-xs tabular-nums text-[var(--uc-signal)]">
+              {String(index + 1).padStart(2, "0")}
             </span>
             <div>
               <ModuleCopy item={item} />
@@ -110,30 +146,38 @@ function PackageFlow({ pkg }: { pkg: UseCasePackage }) {
 
 export function UseCaseCatalog() {
   return (
-    <div className="mt-16 space-y-16">
-      {useCasePackages.map((pkg) => (
-        <section key={pkg.id} aria-labelledby={`${pkg.id}-heading`}>
-          <div className="flex items-center gap-3">
-            <span
-              className="size-2.5 shrink-0"
-              style={{ backgroundColor: pkg.accent }}
-              aria-hidden
-            />
-            <h2
-              id={`${pkg.id}-heading`}
-              className="text-2xl font-medium tracking-tight"
-            >
-              {pkg.name}
-            </h2>
+    <div className="mt-14 md:mt-16">
+      {useCasePackages.map((pkg, index) => (
+        <section
+          key={pkg.id}
+          aria-labelledby={`${pkg.id}-heading`}
+          className="grid grid-cols-1 gap-6 border-t border-[var(--uc-line)] py-10 md:grid-cols-12 md:gap-8 md:py-12"
+        >
+          <div className="md:sticky md:top-24 md:col-span-3 md:self-start">
+            <p className="font-mono text-xs tabular-nums text-[var(--uc-signal)]">
+              {String(index + 1).padStart(2, "0")}
+            </p>
+            <div className="mt-3 flex items-center gap-2">
+              <span
+                className="size-1.5 shrink-0"
+                style={{ backgroundColor: pkg.accent }}
+                aria-hidden
+              />
+              <h2
+                id={`${pkg.id}-heading`}
+                className="font-mono text-[11px] uppercase tracking-[0.16em] text-[var(--uc-bone)]"
+              >
+                {pkg.name}
+              </h2>
+            </div>
           </div>
-          {"line" in pkg && pkg.line ? (
-            <p className="mt-3 text-sm text-muted">{pkg.line}</p>
-          ) : null}
-          {pkg.presentation === "flow" ? (
-            <PackageFlow pkg={pkg} />
-          ) : (
-            <PackageCards pkg={pkg} />
-          )}
+          <div className="md:col-span-9">
+            {pkg.presentation === "flow" ? (
+              <PackageFlow pkg={pkg} />
+            ) : (
+              <PackageCards pkg={pkg} />
+            )}
+          </div>
         </section>
       ))}
     </div>

@@ -13,22 +13,26 @@ export type UseCaseModule = {
   badge?: string;
   /** Consecutive modules with the same pair sit side by side. */
   pair?: string;
+  /** The costlier half of a pair. Rendered in the signal accent. */
+  mark?: "signal";
 };
 
 export type UseCasePackage = {
   id: string;
   name: string;
+  /** Muted sheet-family color for the package bar and chip. */
   accent: string;
   presentation: "cards" | "flow";
+  density?: "tight";
   line?: string;
   modules: readonly UseCaseModule[];
 };
 
-export const useCasePackages = [
+export const useCasePackages: readonly UseCasePackage[] = [
   {
     id: "intake",
     name: "Intake",
-    accent: "#2f6fdb",
+    accent: "#8AADD4",
     presentation: "cards",
     modules: [
       {
@@ -47,6 +51,7 @@ export const useCasePackages = [
         example: "Blank-named PDFs sorted by reading them",
         whatItDoes: "Reads the PDF. Costlier.",
         pair: "routing",
+        mark: "signal",
       },
       {
         title: "Case Database",
@@ -58,7 +63,7 @@ export const useCasePackages = [
   {
     id: "work-routing",
     name: "Work routing",
-    accent: "#7a4eab",
+    accent: "#A394B8",
     presentation: "cards",
     modules: [
       {
@@ -71,7 +76,7 @@ export const useCasePackages = [
   {
     id: "document-drafting",
     name: "Document drafting",
-    accent: "#2e8a4e",
+    accent: "#8FB89A",
     presentation: "flow",
     line: useCasesPage.draftingLine,
     modules: [
@@ -110,7 +115,7 @@ export const useCasePackages = [
   {
     id: "filing",
     name: "Filing",
-    accent: "#0f6b45",
+    accent: "#3D8F68",
     presentation: "cards",
     modules: [
       {
@@ -123,7 +128,7 @@ export const useCasePackages = [
   {
     id: "platform",
     name: "Platform",
-    accent: "#e07a1f",
+    accent: "#C48A62",
     presentation: "cards",
     modules: [
       {
@@ -141,7 +146,7 @@ export const useCasePackages = [
   {
     id: "delivery",
     name: "Delivery",
-    accent: "#c8960a",
+    accent: "#D4C48A",
     presentation: "cards",
     modules: [
       {
@@ -164,7 +169,7 @@ export const useCasePackages = [
   {
     id: "email-intake",
     name: "Email intake",
-    accent: "#8c6a2f",
+    accent: "#C4A15A",
     presentation: "cards",
     modules: [
       {
@@ -178,7 +183,7 @@ export const useCasePackages = [
   {
     id: "visibility",
     name: "Visibility",
-    accent: "#d4537e",
+    accent: "#D4A0AE",
     presentation: "cards",
     modules: [
       {
@@ -196,8 +201,9 @@ export const useCasePackages = [
   {
     id: "standalone",
     name: "Standalone",
-    accent: "#8a8880",
+    accent: "#A39E96",
     presentation: "cards",
+    density: "tight",
     modules: [
       {
         title: "Client Intake Form",
@@ -221,4 +227,4 @@ export const useCasePackages = [
       },
     ],
   },
-] as const satisfies readonly UseCasePackage[];
+];
