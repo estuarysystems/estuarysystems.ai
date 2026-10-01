@@ -4,7 +4,7 @@ import { site } from "@/lib/content";
 export function SiteFooter() {
   return (
     <footer className="border-t border-line">
-      <div className="mx-auto max-w-6xl px-5 py-10 text-sm text-muted">
+      <div className="mx-auto max-w-6xl px-5 py-10 font-mono text-xs tracking-wide text-muted">
         <p>
           Copyright 2026 {site.legalName} |{" "}
           <Link

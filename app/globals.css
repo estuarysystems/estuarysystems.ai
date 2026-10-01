@@ -1,14 +1,15 @@
 @import "tailwindcss";
 
 :root {
-  --paper: #f4f3ee;
-  --ink: #1c1c19;
-  --muted: #5c5b56;
-  --slot: #e7e6e0;
-  --slot-ink: #3f3e3a;
-  --hero: #f4f3ee;
-  --hero-ink: #1c1c19;
-  --line: #d2d1cb;
+  --paper: #0a0a0b;
+  --ink: #eee9df;
+  --muted: #9c978f;
+  --slot: #151517;
+  --slot-ink: #eee9df;
+  --hero: #0a0a0b;
+  --hero-ink: #eee9df;
+  --line: color-mix(in srgb, #5e5b57 78%, transparent);
+  --signal: #ff4d12;
 }
 
 @theme inline {
@@ -20,13 +21,14 @@
   --color-hero: var(--hero);
   --color-hero-ink: var(--hero-ink);
   --color-line: var(--line);
+  --color-signal: var(--signal);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
 }
 
 html {
   scroll-behavior: smooth;
-  color-scheme: light;
+  color-scheme: dark;
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -68,7 +70,54 @@ summary::marker {
   content: "";
 }
 
-/* Use-cases plate: ink field, bone type, one signal. Scoped so the rest of the site stays paper. */
+/* Drafting field: faint coordinate grid under every page. Geometry sits in the margin. */
+.drafting-board {
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  overflow: hidden;
+  pointer-events: none;
+  color: color-mix(in srgb, var(--ink) 42%, transparent);
+  background-color: var(--paper);
+  background-image:
+    linear-gradient(to right, color-mix(in srgb, var(--ink) 12%, transparent) 1px, transparent 1px),
+    linear-gradient(to bottom, color-mix(in srgb, var(--ink) 12%, transparent) 1px, transparent 1px),
+    linear-gradient(to right, color-mix(in srgb, var(--ink) 22%, transparent) 1px, transparent 1px),
+    linear-gradient(to bottom, color-mix(in srgb, var(--ink) 22%, transparent) 1px, transparent 1px);
+  background-size:
+    24px 24px,
+    24px 24px,
+    120px 120px,
+    120px 120px;
+}
+
+.drafting-board-sheet,
+.drafting-board-arc {
+  position: absolute;
+  font-family: var(--font-geist-mono), ui-monospace, monospace;
+}
+
+.drafting-board-sheet {
+  inset: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.drafting-board-arc {
+  top: 4.25rem;
+  right: -108px;
+  width: 220px;
+  height: 220px;
+}
+
+@media (max-width: 1023px) {
+  .drafting-board-ticks,
+  .drafting-board-arc {
+    display: none;
+  }
+}
+
+/* Use-cases plate sits on the same field. Panels stay raised. */
 @layer components {
   .use-cases {
     --uc-ink: #0a0a0b;
@@ -78,7 +127,7 @@ summary::marker {
     --uc-bone: #eee9df;
     --uc-signal: #ff4d12;
     --uc-line: color-mix(in srgb, #5e5b57 70%, transparent);
-    background: var(--uc-ink);
+    background: transparent;
     color: var(--uc-bone);
     color-scheme: dark;
     overflow-x: clip;

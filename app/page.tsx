@@ -28,7 +28,7 @@ export default function HomePage() {
         </p>
 
         <section
-          className="mt-12 border border-line"
+          className="mt-12 border border-line bg-slot"
           aria-labelledby="contact-heading"
         >
           <div className="border-b border-line px-5 py-4">

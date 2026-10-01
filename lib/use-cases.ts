@@ -84,7 +84,7 @@ export const useCasePackages: readonly UseCasePackage[] = [
     presentation: "cards",
     modules: [
       {
-        title: "Team Messaging Automation",
+        title: "Bots fetch info across teams",
         example: "Bots for different employees message each other to retrieve info",
       },
     ],
