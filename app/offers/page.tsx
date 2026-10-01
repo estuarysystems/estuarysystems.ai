@@ -31,7 +31,7 @@ export default function OffersPage() {
             return (
               <section
                 key={offer.id}
-                className="flex flex-col border border-line px-6 py-8 md:px-8 md:py-10"
+                className="flex flex-col border border-line bg-slot px-6 py-8 md:px-8 md:py-10"
                 aria-labelledby={`${offer.id}-heading`}
               >
                 <h2

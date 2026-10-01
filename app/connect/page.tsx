@@ -12,7 +12,7 @@ export default function ConnectPage() {
       <div className="mx-auto max-w-6xl px-5 py-16 md:py-24">
         <h1 className="text-6xl font-medium tracking-tight md:text-8xl">Connect</h1>
         <p className="mt-8 max-w-2xl text-lg text-muted">{site.scheduleLabel}</p>
-        <div className="mt-16">
+        <div className="mt-16 border border-line bg-slot">
           <CalEmbed />
         </div>
       </div>

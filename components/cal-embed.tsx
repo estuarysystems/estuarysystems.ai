@@ -5,7 +5,7 @@ export function CalEmbed() {
     <iframe
       src={site.calEmbedSrc}
       title={site.scheduleLabel}
-      className="h-[780px] w-full border-0 bg-paper md:h-[860px]"
+      className="h-[780px] w-full border-0 bg-[#eee9df] md:h-[860px]"
     />
   );
 }
