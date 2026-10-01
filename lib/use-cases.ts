@@ -146,20 +146,16 @@ export const useCasePackages: readonly UseCasePackage[] = [
     density: "tight",
     modules: [
       {
-        title: "Client Intake Form",
-        example: "New client fill-out form",
-      },
-      {
-        title: "Training Video Pipeline",
-        example: "SOP row → training video script",
+        title: "Training Video",
+        example: "A training video can be made for any topic",
       },
       {
         title: "Price Watch",
         example: "Flag cards underpriced by $5+",
       },
       {
-        title: "Website Risk Scan",
-        example: "Scan a business site for common risks",
+        title: "Web Log",
+        example: "A continual check on a competitor site, or any site",
       },
     ],
   },
