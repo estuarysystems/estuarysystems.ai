@@ -1,4 +1,5 @@
 import {
+  moduleId,
   useCasePackages,
   type UseCaseModule,
   type UseCasePackage,
@@ -45,7 +46,8 @@ function ModuleCard({
 }) {
   return (
     <article
-      className={`use-cases-panel border-l-[3px] px-5 ${dense ? "py-4" : "py-5"} ${className}`}
+      id={moduleId(item.title)}
+      className={`use-cases-panel scroll-mt-24 border-l-[3px] px-5 ${dense ? "py-4" : "py-5"} ${className}`}
       style={{ borderLeftColor: accent }}
     >
       <ModuleCopy item={item} dense={dense} />
@@ -121,7 +123,8 @@ function PackageFlow({ pkg }: { pkg: UseCasePackage }) {
         {pkg.modules.map((item, index) => (
           <li
             key={item.title}
-            className="use-cases-step grid grid-cols-[2.5rem_minmax(0,1fr)] gap-x-3 border-t border-[var(--uc-line)] px-5 py-5 first:border-t-0 md:gap-x-5"
+            id={moduleId(item.title)}
+            className="use-cases-step scroll-mt-24 grid grid-cols-[2.5rem_minmax(0,1fr)] gap-x-3 border-t border-[var(--uc-line)] px-5 py-5 first:border-t-0 md:gap-x-5"
             style={{ animationDelay: `${index * 40}ms` }}
           >
             <span className="pt-1 font-mono text-xs tabular-nums text-[var(--uc-signal)]">
@@ -143,8 +146,9 @@ export function UseCaseCatalog() {
       {useCasePackages.map((pkg, index) => (
         <section
           key={pkg.id}
+          id={pkg.id}
           aria-labelledby={`${pkg.id}-heading`}
-          className="grid grid-cols-1 gap-6 border-t border-[var(--uc-line)] py-10 md:grid-cols-12 md:gap-8 md:py-12"
+          className="grid scroll-mt-24 grid-cols-1 gap-6 border-t border-[var(--uc-line)] py-10 md:grid-cols-12 md:gap-8 md:py-12"
         >
           <div className="md:sticky md:top-24 md:col-span-3 md:self-start">
             <p className="font-mono text-xs tabular-nums text-[var(--uc-signal)]">
@@ -163,6 +167,14 @@ export function UseCaseCatalog() {
                 {pkg.name}
               </h2>
             </div>
+            {pkg.startHere ? (
+              <p className="mt-3 font-mono text-[10px] uppercase tracking-[0.16em] text-[var(--uc-signal)]">
+                Start here
+              </p>
+            ) : null}
+            {pkg.lede ? (
+              <p className="mt-3 text-sm leading-relaxed text-[var(--uc-ash)]">{pkg.lede}</p>
+            ) : null}
           </div>
           <div className="md:col-span-9">
             {pkg.presentation === "flow" ? (

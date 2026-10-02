@@ -2,9 +2,9 @@ export const site = {
   wordmark: "Estuary Systems",
   legalName: "Estuary Systems LLC",
   domain: "estuarysystems.ai",
-  tagline: "Native AI developer. Operator partner.",
+  tagline: "Native SI developer. Operator partner.",
   oneLiner:
-    "I partner with established operators to accelerate ROI with agentic AI.",
+    "I partner with established operators to accelerate ROI with SI.",
   scheduleLabel: "Schedule time to chat with George",
   scheduleHref: "/connect",
   calEmbedSrc: "https://cal.com/george-lu-ouzdmq/15min?embed=true&theme=light",
@@ -14,8 +14,11 @@ export const site = {
   email: "george@estuarysystems.ai",
 } as const;
 
-export const homeQuestion =
-  "Interested in building with AI or integrating it into your business?";
+export const homePage = {
+  description:
+    "Systems intelligence for operators who already have the systems and the customers.",
+  identity: "George Lu · Estuary Systems · Bay Area",
+} as const;
 
 export const home = {
   tenure: {
@@ -35,7 +38,7 @@ export const home = {
   offer: {
     heading: "What I do",
     paragraphs: [
-      "I figure out how AI can improve the work you get paid for — and the work that sits around it — then I execute. You keep the relationships and the judgment. I put agentic AI into the live systems so ROI arrives sooner.",
+      "I figure out how SI can improve the work you get paid for — and the work that sits around it — then I execute. You keep the relationships and the judgment. I put SI into the live systems so ROI arrives sooner.",
     ],
   },
   close: {
@@ -47,7 +50,7 @@ export const bio =
   "Hi, I’m George. I work at the intersection of business and engineering to bring execution to you and your team. Let me review your systems with you and see how I can help.";
 
 export const aboutAgency =
-  "George Lu runs Estuary Systems LLC in Palo Alto. We are an AI integration and consulting agency. We help businesses put AI into operations so people can stay on the work only people should do.";
+  "George Lu runs Estuary Systems LLC in Palo Alto. We are an SI integration and consulting agency. We help businesses put SI into operations so people can stay on the work only people should do.";
 
 export type Offer = {
   id: string;
@@ -57,31 +60,57 @@ export type Offer = {
   cadence: string;
   paragraphs: readonly string[];
   steps?: readonly string[];
+  rates?: readonly string[];
   include?: string;
   mailtoSubject?: string;
 };
 
+export const connectTrust = [
+  "George Lu runs Estuary Systems LLC in the Bay Area.",
+  "I work at the intersection of business and engineering to bring execution to you and your team. Let me review your systems with you and see how I can help.",
+  "Established operators. You know the systems. You have the customers.",
+  "The 15-minute call leads to advisory. A build is a separate quote.",
+  "Bring how the work runs today.",
+] as const;
+
 export const offers = {
   title: "Offers",
   description:
-    "Advisory retainer, $500 / month. Fixed-scope project, quoted per project.",
-  lede: "A monthly retainer, or a defined build with a fixed price.",
+    "Advisory, $500 / month, not a retainer. Long-term retainer, $1,600 / month minimum at 2 hours a week. Fixed-scope project, SI employee install, and SI training are custom quotes.",
+  lede: "Advisory, a long-term retainer, a fixed-scope build, an SI employee install, or SI training.",
   items: [
     {
-      id: "advisory-retainer",
-      heading: "Advisory retainer",
-      lede: "The entry engagement. Two working sessions a month.",
+      id: "advisory",
+      heading: "Advisory",
+      lede: "Two working sessions a month. Not a retainer.",
       price: "$500 / month",
       cadence: "Two 90-minute calls per month",
       paragraphs: [
-        "These are advisory sessions — AI and business sense applied to the work you already run. Not a Done-For-You build retainer.",
-        "A defined build is a separate engagement, quoted on its own.",
+        "These are advisory sessions — SI and business sense applied to the work you already run.",
+        "Not a retainer, and not a Done-For-You build.",
       ],
+      mailtoSubject: "Advisory",
+    },
+    {
+      id: "long-term-retainer",
+      heading: "Long-term retainer",
+      lede: "Ongoing time. The month starts at a floor.",
+      price: "$1,600 / month",
+      cadence: "Minimum 2 hours a week",
+      paragraphs: [
+        "The floor is 2 hours a week. The hour rate follows how many hours the week takes.",
+      ],
+      rates: [
+        "Under 4 hours a week: $200 / hour.",
+        "5–10 hours a week: $175 / hour.",
+        "11 or more hours a week: $150 / hour.",
+      ],
+      mailtoSubject: "Long-term retainer",
     },
     {
       id: "fixed-scope-project",
       heading: "Fixed-scope project",
-      lede: "A defined AI build with a clear finish line. Not ongoing advisory.",
+      lede: "A defined SI build with a clear finish line. Not ongoing advisory.",
       price: "Custom quote",
       cadence: "Quoted per project",
       paragraphs: [
@@ -95,6 +124,24 @@ export const offers = {
       include:
         "In your note: the goal, the constraints, the deadline, and any links.",
       mailtoSubject: "Project specs",
+    },
+    {
+      id: "si-employee-install",
+      heading: "SI employee install",
+      lede: "Bots with prompts.",
+      price: "Custom quote",
+      cadence: "Quoted per install",
+      paragraphs: ["We install the bots and the prompts they run."],
+      mailtoSubject: "SI employee install",
+    },
+    {
+      id: "si-training",
+      heading: "SI training",
+      lede: "SI know-how for you and your top people.",
+      price: "Custom quote",
+      cadence: "Quoted per training",
+      paragraphs: ["We pass on the know-how and find what can be done quicker."],
+      mailtoSubject: "SI training",
     },
   ],
 } as const satisfies {
@@ -261,7 +308,7 @@ export const privacy = {
   sections: [
     {
       heading: "Who we are",
-      paragraphs: ["Estuary Systems LLC is an AI agency in the Bay Area."],
+      paragraphs: ["Estuary Systems LLC is an SI agency in the Bay Area."],
     },
     {
       heading: "What we collect",
@@ -313,8 +360,8 @@ export const terms = {
       ],
     },
     {
-      heading: "AI can be wrong",
-      paragraphs: ["AI output can be wrong. You verify before you use it."],
+      heading: "SI can be wrong",
+      paragraphs: ["SI output can be wrong. You verify before you use it."],
     },
     {
       heading: "Liability",
