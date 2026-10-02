@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
+import { DraftingBoard } from "@/components/drafting-board";
 import { SiteFooter } from "@/components/site-footer";
 import { SiteHeader } from "@/components/site-header";
 import { homePage, site } from "@/lib/content";
@@ -33,13 +34,16 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
       lang="en"
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
     >
-      <body className="flex min-h-full flex-col bg-paper text-ink">
+      <body className="relative flex min-h-full flex-col bg-paper text-ink">
+        <DraftingBoard />
         <a href="#main" className="skip-link">
           Skip to content
         </a>
-        <SiteHeader />
-        <div className="flex-1">{children}</div>
-        <SiteFooter />
+        <div className="relative z-10 flex min-h-full min-w-0 flex-1 flex-col">
+          <SiteHeader />
+          <div className="min-w-0 flex-1 overflow-x-clip">{children}</div>
+          <SiteFooter />
+        </div>
       </body>
     </html>
   );

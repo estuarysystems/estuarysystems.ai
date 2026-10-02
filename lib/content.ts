@@ -15,8 +15,7 @@ export const site = {
 } as const;
 
 export const homePage = {
-  description:
-    "Systems intelligence for operators who already have the systems and the customers.",
+  description: "Power Your Business with Superintelligence",
   identity: "George Lu · Estuary Systems · Bay Area",
 } as const;
 
@@ -52,19 +51,6 @@ export const bio =
 export const aboutAgency =
   "George Lu runs Estuary Systems LLC in Palo Alto. We are an SI integration and consulting agency. We help businesses put SI into operations so people can stay on the work only people should do.";
 
-export type Offer = {
-  id: string;
-  heading: string;
-  lede: string;
-  price: string;
-  cadence: string;
-  paragraphs: readonly string[];
-  steps?: readonly string[];
-  rates?: readonly string[];
-  include?: string;
-  mailtoSubject?: string;
-};
-
 export const connectTrust = [
   "George Lu runs Estuary Systems LLC in the Bay Area.",
   "I work at the intersection of business and engineering to bring execution to you and your team. Let me review your systems with you and see how I can help.",
@@ -72,84 +58,6 @@ export const connectTrust = [
   "The 15-minute call leads to advisory. A build is a separate quote.",
   "Bring how the work runs today.",
 ] as const;
-
-export const offers = {
-  title: "Offers",
-  description:
-    "Advisory, $500 / month, not a retainer. Long-term retainer, $1,600 / month minimum at 2 hours a week. Fixed-scope project, SI employee install, and SI training are custom quotes.",
-  lede: "Advisory, a long-term retainer, a fixed-scope build, an SI employee install, or SI training.",
-  items: [
-    {
-      id: "advisory",
-      heading: "Advisory",
-      lede: "Two working sessions a month. Not a retainer.",
-      price: "$500 / month",
-      cadence: "Two 90-minute calls per month",
-      paragraphs: [
-        "These are advisory sessions — SI and business sense applied to the work you already run.",
-        "Not a retainer, and not a Done-For-You build.",
-      ],
-      mailtoSubject: "Advisory",
-    },
-    {
-      id: "long-term-retainer",
-      heading: "Long-term retainer",
-      lede: "Ongoing time. The month starts at a floor.",
-      price: "$1,600 / month",
-      cadence: "Minimum 2 hours a week",
-      paragraphs: [
-        "The floor is 2 hours a week. The hour rate follows how many hours the week takes.",
-      ],
-      rates: [
-        "Under 4 hours a week: $200 / hour.",
-        "5–10 hours a week: $175 / hour.",
-        "11 or more hours a week: $150 / hour.",
-      ],
-      mailtoSubject: "Long-term retainer",
-    },
-    {
-      id: "fixed-scope-project",
-      heading: "Fixed-scope project",
-      lede: "A defined SI build with a clear finish line. Not ongoing advisory.",
-      price: "Custom quote",
-      cadence: "Quoted per project",
-      paragraphs: [
-        "A tool, workflow, integration, internal app, or landing page. You know what done looks like.",
-      ],
-      steps: [
-        "Send the specs.",
-        "We quote a fixed price.",
-        "We build to that scope.",
-      ],
-      include:
-        "In your note: the goal, the constraints, the deadline, and any links.",
-      mailtoSubject: "Project specs",
-    },
-    {
-      id: "si-employee-install",
-      heading: "SI employee install",
-      lede: "Bots with prompts.",
-      price: "Custom quote",
-      cadence: "Quoted per install",
-      paragraphs: ["We install the bots and the prompts they run."],
-      mailtoSubject: "SI employee install",
-    },
-    {
-      id: "si-training",
-      heading: "SI training",
-      lede: "SI know-how for you and your top people.",
-      price: "Custom quote",
-      cadence: "Quoted per training",
-      paragraphs: ["We pass on the know-how and find what can be done quicker."],
-      mailtoSubject: "SI training",
-    },
-  ],
-} as const satisfies {
-  title: string;
-  description: string;
-  lede: string;
-  items: readonly Offer[];
-};
 
 export const nav = [
   { href: "/offers", label: "Offers" },

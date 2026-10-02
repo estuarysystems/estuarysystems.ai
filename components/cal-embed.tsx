@@ -1,11 +1,11 @@
 import { site } from "@/lib/content";
 
-export function CalEmbed() {
+export function CalEmbed({ title = site.scheduleLabel }: { title?: string }) {
   return (
     <iframe
       src={site.calEmbedSrc}
-      title={site.scheduleLabel}
-      className="h-[780px] w-full border-0 bg-paper md:h-[860px]"
+      title={title}
+      className="h-[780px] w-full border-0 bg-[#eee9df] md:h-[860px]"
     />
   );
 }
