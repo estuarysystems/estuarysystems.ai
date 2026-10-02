@@ -70,51 +70,18 @@ summary::marker {
   content: "";
 }
 
-/* Drafting field: faint coordinate grid under every page. Geometry sits in the margin. */
+/* Approved field: charcoal grid and wispy lines, fixed behind every page. */
 .drafting-board {
   position: fixed;
   inset: 0;
   z-index: 0;
   overflow: hidden;
   pointer-events: none;
-  color: color-mix(in srgb, var(--ink) 42%, transparent);
   background-color: var(--paper);
-  background-image:
-    linear-gradient(to right, color-mix(in srgb, var(--ink) 12%, transparent) 1px, transparent 1px),
-    linear-gradient(to bottom, color-mix(in srgb, var(--ink) 12%, transparent) 1px, transparent 1px),
-    linear-gradient(to right, color-mix(in srgb, var(--ink) 22%, transparent) 1px, transparent 1px),
-    linear-gradient(to bottom, color-mix(in srgb, var(--ink) 22%, transparent) 1px, transparent 1px);
-  background-size:
-    24px 24px,
-    24px 24px,
-    120px 120px,
-    120px 120px;
-}
-
-.drafting-board-sheet,
-.drafting-board-arc {
-  position: absolute;
-  font-family: var(--font-geist-mono), ui-monospace, monospace;
-}
-
-.drafting-board-sheet {
-  inset: 0;
-  width: 100%;
-  height: 100%;
-}
-
-.drafting-board-arc {
-  top: 4.25rem;
-  right: -108px;
-  width: 220px;
-  height: 220px;
-}
-
-@media (max-width: 1023px) {
-  .drafting-board-ticks,
-  .drafting-board-arc {
-    display: none;
-  }
+  background-image: url("/estuary-site-background.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
 }
 
 .use-case-reel {
