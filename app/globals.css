@@ -1,14 +1,15 @@
 @import "tailwindcss";
 
 :root {
-  --paper: #f4f3ee;
-  --ink: #1c1c19;
-  --muted: #5c5b56;
-  --slot: #e7e6e0;
-  --slot-ink: #3f3e3a;
-  --hero: #f4f3ee;
-  --hero-ink: #1c1c19;
-  --line: #d2d1cb;
+  --paper: #0a0a0b;
+  --ink: #eee9df;
+  --muted: #9c978f;
+  --slot: #151517;
+  --slot-ink: #eee9df;
+  --hero: #0a0a0b;
+  --hero-ink: #eee9df;
+  --line: color-mix(in srgb, #5e5b57 78%, transparent);
+  --signal: #ff4d12;
 }
 
 @theme inline {
@@ -20,13 +21,14 @@
   --color-hero: var(--hero);
   --color-hero-ink: var(--hero-ink);
   --color-line: var(--line);
+  --color-signal: var(--signal);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
 }
 
 html {
   scroll-behavior: smooth;
-  color-scheme: light;
+  color-scheme: dark;
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -42,7 +44,7 @@ body {
 }
 
 :focus-visible {
-  outline: 2px solid currentColor;
+  outline: 2px solid var(--signal);
   outline-offset: 3px;
 }
 
@@ -68,75 +70,171 @@ summary::marker {
   content: "";
 }
 
-/* Use-cases plate: ink field, bone type, one signal. Scoped so the rest of the site stays paper. */
-@layer components {
-  .use-cases {
-    --uc-ink: #0a0a0b;
-    --uc-ink2: #151517;
-    --uc-graphite: #5e5b57;
-    --uc-ash: #9c978f;
-    --uc-bone: #eee9df;
-    --uc-signal: #ff4d12;
-    --uc-line: color-mix(in srgb, #5e5b57 70%, transparent);
-    background: var(--uc-ink);
-    color: var(--uc-bone);
-    color-scheme: dark;
-    overflow-x: clip;
-  }
+/* Drafting field: faint coordinate grid under every page. Geometry sits in the margin. */
+.drafting-board {
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  overflow: hidden;
+  pointer-events: none;
+  color: color-mix(in srgb, var(--ink) 42%, transparent);
+  background-color: var(--paper);
+  background-image:
+    linear-gradient(to right, color-mix(in srgb, var(--ink) 12%, transparent) 1px, transparent 1px),
+    linear-gradient(to bottom, color-mix(in srgb, var(--ink) 12%, transparent) 1px, transparent 1px),
+    linear-gradient(to right, color-mix(in srgb, var(--ink) 22%, transparent) 1px, transparent 1px),
+    linear-gradient(to bottom, color-mix(in srgb, var(--ink) 22%, transparent) 1px, transparent 1px);
+  background-size:
+    24px 24px,
+    24px 24px,
+    120px 120px,
+    120px 120px;
+}
 
-  .use-cases-panel {
-    background: var(--uc-ink2);
-    border: 1px solid var(--uc-line);
-    transition: border-color 140ms cubic-bezier(0.16, 1, 0.3, 1);
-  }
+.drafting-board-sheet,
+.drafting-board-arc {
+  position: absolute;
+  font-family: var(--font-geist-mono), ui-monospace, monospace;
+}
 
-  .use-cases-panel:hover {
-    border-top-color: var(--uc-ash);
-    border-right-color: var(--uc-ash);
-    border-bottom-color: var(--uc-ash);
-  }
+.drafting-board-sheet {
+  inset: 0;
+  width: 100%;
+  height: 100%;
+}
 
-  .use-cases-cta {
-    background: var(--uc-signal);
-    color: var(--uc-ink);
-    transition:
-      background-color 140ms cubic-bezier(0.16, 1, 0.3, 1),
-      color 140ms cubic-bezier(0.16, 1, 0.3, 1);
-  }
+.drafting-board-arc {
+  top: 4.25rem;
+  right: -108px;
+  width: 220px;
+  height: 220px;
+}
 
-  .use-cases-cta:hover {
-    background: var(--uc-bone);
-    color: var(--uc-ink);
-  }
-
-  .use-cases-cta:focus-visible {
-    outline: 2px solid var(--uc-bone);
-    outline-offset: 3px;
-  }
-
-  @media (prefers-reduced-motion: no-preference) {
-    .use-cases-step {
-      animation: use-cases-snap 160ms cubic-bezier(0.16, 1, 0.3, 1) both;
-    }
-  }
-
-  @media (prefers-reduced-motion: reduce) {
-    .use-cases-panel,
-    .use-cases-cta,
-    .use-cases-step {
-      transition: none;
-      animation: none;
-    }
+@media (max-width: 1023px) {
+  .drafting-board-ticks,
+  .drafting-board-arc {
+    display: none;
   }
 }
 
-@keyframes use-cases-snap {
-  from {
-    opacity: 0;
-    transform: translateY(8px);
+.use-case-reel {
+  min-width: 0;
+  max-width: 100%;
+  border-block: 1px solid var(--line);
+  mask-image: linear-gradient(to right, transparent, #000 5%, #000 95%, transparent);
+}
+
+.use-case-reel-track {
+  display: flex;
+  width: 100%;
+  overflow-x: auto;
+  overscroll-behavior-x: contain;
+  scroll-behavior: auto;
+  scrollbar-width: none;
+}
+
+.use-case-reel-track::-webkit-scrollbar {
+  display: none;
+}
+
+.use-case-reel-bar {
+  display: flex;
+  flex: none;
+  align-items: center;
+  height: 4.75rem;
+  padding: 0 1.5rem;
+  border-right: 1px solid var(--line);
+  background: color-mix(in srgb, var(--slot) 92%, transparent);
+  color: var(--ink);
+  font-family: var(--font-geist-mono), ui-monospace, monospace;
+  font-size: 0.95rem;
+  letter-spacing: -0.02em;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.use-case-reel-bar:hover,
+.use-case-reel-bar:focus-visible {
+  background: var(--slot);
+  color: var(--signal);
+}
+
+@media (min-width: 768px) {
+  .use-case-reel-bar {
+    height: 5.5rem;
+    padding-inline: 2rem;
+    font-size: 1.05rem;
   }
-  to {
-    opacity: 1;
-    transform: none;
+}
+
+.use-case-reel-track.is-static {
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  overflow: visible;
+  padding: 0.75rem 1.25rem;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .use-case-reel {
+    mask-image: none;
   }
+
+  .use-case-reel-bar {
+    border: 1px solid var(--line);
+  }
+}
+
+.offer-range {
+  --fill: 0%;
+  appearance: none;
+  width: 100%;
+  height: 2.75rem;
+  margin: 0;
+  background: transparent;
+  cursor: pointer;
+}
+
+.offer-range:focus {
+  outline: none;
+}
+
+.offer-range:focus-visible {
+  outline: 2px solid var(--signal);
+  outline-offset: 4px;
+}
+
+.offer-range::-webkit-slider-runnable-track {
+  height: 6px;
+  background: linear-gradient(
+    to right,
+    var(--signal) var(--fill),
+    color-mix(in srgb, var(--ink) 28%, transparent) var(--fill)
+  );
+}
+
+.offer-range::-webkit-slider-thumb {
+  appearance: none;
+  width: 14px;
+  height: 28px;
+  margin-top: -11px;
+  border: 0;
+  background: var(--signal);
+}
+
+.offer-range::-moz-range-track {
+  height: 6px;
+  border: 0;
+  background: linear-gradient(
+    to right,
+    var(--signal) var(--fill),
+    color-mix(in srgb, var(--ink) 28%, transparent) var(--fill)
+  );
+}
+
+.offer-range::-moz-range-thumb {
+  width: 14px;
+  height: 28px;
+  border: 0;
+  border-radius: 0;
+  background: var(--signal);
 }

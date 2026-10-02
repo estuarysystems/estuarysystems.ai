@@ -29,7 +29,7 @@ export default function ConnectPage() {
             {site.email}
           </a>
         </p>
-        <div className="mt-16">
+        <div className="mt-16 border border-line bg-slot">
           <CalEmbed />
         </div>
       </div>
