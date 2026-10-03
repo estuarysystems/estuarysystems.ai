@@ -17,7 +17,7 @@ export type IndustrySection = {
 export const industrySections: readonly IndustrySection[] = [
   {
     id: "retail-shop",
-    name: "Retail shop",
+    name: "Retail",
     items: [
       {
         title: "Shift scheduling",
@@ -65,5 +65,5 @@ const retailShop = industrySections.find((section) => section.id === "retail-sho
 const legalFirm = industrySections.find((section) => section.id === "legal-firm");
 
 if (industrySections.length !== 2 || retailShop?.items.length !== 4 || legalFirm?.items.length !== 4) {
-  throw new Error("Expected Retail shop and Legal firm sections, each with 4 items");
+  throw new Error("Expected Retail and Legal firm sections, each with 4 items");
 }

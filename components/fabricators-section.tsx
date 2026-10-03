@@ -8,7 +8,6 @@ export function FabricatorsSection() {
           <article className="border border-line bg-slot px-4 py-3.5 md:px-5 md:py-4">
             <h2 className="text-base font-medium tracking-tight">{solution.title}</h2>
             <p className="mt-1 text-sm font-medium leading-relaxed">{solution.price}</p>
-            <p className="mt-1 text-sm leading-relaxed text-muted">{solution.description}</p>
           </article>
           {solution.status ? (
             <p className="mt-2 font-mono text-[11px] leading-relaxed text-muted">{solution.status}</p>

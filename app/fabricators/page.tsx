@@ -18,6 +18,7 @@ export default function FabricatorsPage() {
     <main id="main">
       <div className="mx-auto max-w-6xl px-5 py-12 md:py-16">
         <h1 className="text-5xl font-medium tracking-[-0.04em] md:text-7xl">{fabricatorsPage.title}</h1>
+        <p className="mt-5 max-w-2xl text-lg text-muted">{fabricatorsPage.description}</p>
         <FabricatorsSection />
       </div>
     </main>
