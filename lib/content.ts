@@ -62,6 +62,7 @@ export const connectTrust = [
 export const nav = [
   { href: "/offers", label: "Offers" },
   { href: "/use-cases", label: "Use cases" },
+  { href: "/fabricators", label: "Fabricators" },
 ] as const;
 
 export const walk = [

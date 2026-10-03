@@ -1,0 +1,20 @@
+import { fabricatorSolutions } from "@/lib/fabricators";
+
+export function FabricatorsSection() {
+  return (
+    <div className="mt-8 grid items-start gap-2 md:mt-10 md:grid-cols-2">
+      {fabricatorSolutions.map((solution) => (
+        <div key={solution.title}>
+          <article className="border border-line bg-slot px-4 py-3.5 md:px-5 md:py-4">
+            <h2 className="text-base font-medium tracking-tight">{solution.title}</h2>
+            <p className="mt-1 text-sm font-medium leading-relaxed">{solution.price}</p>
+            <p className="mt-1 text-sm leading-relaxed text-muted">{solution.description}</p>
+          </article>
+          {solution.status ? (
+            <p className="mt-2 font-mono text-[11px] leading-relaxed text-muted">{solution.status}</p>
+          ) : null}
+        </div>
+      ))}
+    </div>
+  );
+}
