@@ -138,12 +138,37 @@ export const useCaseSections: readonly UseCaseSection[] = [
       },
     ],
   },
+  {
+    id: "shops",
+    name: "Shops",
+    modules: [
+      {
+        title: "Daily close",
+        description:
+          "Match the register, the fuel sales, and the card deposits. Flag the gap on the same day.",
+      },
+      {
+        title: "Vendor bills",
+        description: "Read the invoices. Flag a price jump before the owner pays.",
+      },
+      {
+        title: "Staff",
+        description:
+          "Build the week's shifts. Send the open-shift text. Screen applicants from the hiring post.",
+      },
+      {
+        title: "Order request",
+        description:
+          "A buyer describes the part in plain language on the shop site. The shop gets a clear order request. The request shows the material, the size, the quantity, and the notes. The material can be metal, plastic, or another material. The shop reviews the request. The shop makes the part.",
+      },
+    ],
+  },
 ];
 
 export const useCaseModules: readonly UseCaseModule[] = useCaseSections.flatMap(
   (section) => section.modules,
 );
 
-if (useCaseModules.length !== 18) {
-  throw new Error(`Expected 18 use cases, found ${useCaseModules.length}`);
+if (useCaseModules.length !== 22) {
+  throw new Error(`Expected 22 use cases, found ${useCaseModules.length}`);
 }
