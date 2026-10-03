@@ -7,7 +7,7 @@ export function SiteHeader() {
       <div className="mx-auto flex max-w-6xl items-center justify-between gap-6 px-5 py-5">
         <Link
           href="/"
-          className="min-w-0 text-sm leading-tight tracking-tight text-balance text-ink"
+          className="min-w-0 text-sm leading-tight tracking-tight text-balance text-ink max-[360px]:text-[11px]"
         >
           Your Superintelligence Deployment Platform
         </Link>
