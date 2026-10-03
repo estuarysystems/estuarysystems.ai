@@ -9,7 +9,7 @@ One static Next.js App Router site. Production is Google Cloud Run. Vercel deplo
 - `/` — Estuary Systems, “Power Your Business with Superintelligence”, a rotating use-case bar, and the intro-call panel
 - `/connect` — Short trust lines, then the Cal.com schedule embed
 - `/offers` — Two boxes. Recurring slider: advisory at $500/month, then a long-term retainer from 2 hours/week ($1,600/month) in 2-hour steps to 20. One-time slider: fixed-scope project, SI employee install, SI training
-- `/use-cases` — Existing section headings. Each module is a title and one sentence
+- `/use-cases` — Existing section headings, plus a Shops section. Each module is a title and short plain sentences
 - `/privacy` — existing Privacy copy (footer only)
 - `/terms` — existing Terms copy (footer only)
 - `/about`, `/alexandria`, `/tools`, `/tools/*` — parked; redirect to `/`
@@ -68,6 +68,6 @@ npm run build
 
 Public frame is SI (systems intelligence), not AI.
 
-Home is the name, the superintelligence line, the rotating use-case bar, and the intro-call panel. `/offers` is two sliders. Advisory is $500/month. The long-term retainer starts at 2 hours a week and $1,600/month, then steps by 2 hours up to 20. Price the retainer on each weekly hour, then multiply the week by 4 for the month: hours 1–4 at $200, hours 5–10 at $175, hours 11–20 at $150. Show that calculated month price. Do not list the hour bands as static labels. Fixed-scope project, SI employee install, and SI training are the one-time slider, each a custom quote. `/use-cases` keeps its section headings. Each module is a short title and one sentence, with no examples, badges, or section essays. The home bar uses those titles. `/connect` carries a short trust strip, then the booker.
+Home is the name, the superintelligence line, the rotating use-case bar, and the intro-call panel. `/offers` is two sliders. Advisory is $500/month. The long-term retainer starts at 2 hours a week and $1,600/month, then steps by 2 hours up to 20. Price the retainer on each weekly hour, then multiply the week by 4 for the month: hours 1–4 at $200, hours 5–10 at $175, hours 11–20 at $150. Show that calculated month price. Do not list the hour bands as static labels. Fixed-scope project, SI employee install, and SI training are the one-time slider, each a custom quote. `/use-cases` keeps its section headings, plus a Shops section for the gas-station jobs Daily close, Vendor bills, and Staff. Each module is a short title and short plain sentences, with no examples, badges, or section essays. The home bar uses those titles. Do not claim a named station. `/connect` carries a short trust strip, then the booker.
 
 Parked product routes redirect to `/`. Do not unpark the capabilities list or the blog. No case studies, client brands, logos, or invented metrics. Keep thin Privacy and Terms. Public-safe copy only: no Covenant, no client names. Do not revive `/pricing`. Do not add prices outside that ladder.

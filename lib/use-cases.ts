@@ -138,12 +138,32 @@ export const useCaseSections: readonly UseCaseSection[] = [
       },
     ],
   },
+  {
+    id: "shops",
+    name: "Shops",
+    modules: [
+      {
+        title: "Daily close",
+        description:
+          "Match the register, the fuel sales, and the card deposits. Flag the gap on the same day.",
+      },
+      {
+        title: "Vendor bills",
+        description: "Read the invoices. Flag a price jump before the owner pays.",
+      },
+      {
+        title: "Staff",
+        description:
+          "Build the week's shifts. Send the open-shift text. Screen applicants from the hiring post.",
+      },
+    ],
+  },
 ];
 
 export const useCaseModules: readonly UseCaseModule[] = useCaseSections.flatMap(
   (section) => section.modules,
 );
 
-if (useCaseModules.length !== 18) {
-  throw new Error(`Expected 18 use cases, found ${useCaseModules.length}`);
+if (useCaseModules.length !== 21) {
+  throw new Error(`Expected 21 use cases, found ${useCaseModules.length}`);
 }
