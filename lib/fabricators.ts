@@ -6,7 +6,6 @@ export const fabricatorsPage = {
 export type FabricatorSolution = {
   title: string;
   price: string;
-  status?: string;
 };
 
 export const fabricatorSolutions: readonly FabricatorSolution[] = [
@@ -18,7 +17,6 @@ export const fabricatorSolutions: readonly FabricatorSolution[] = [
     title: "Connect to Estuary-Fabricate",
     price:
       "$500 setup and onboarding, plus a token fee equal to what OpenAI charges (pass-through, no markup), plus 10% of sales each month.",
-    status: "Labeled demo. One sample shop, sample rates, no real charge.",
   },
 ];
 
