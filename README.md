@@ -10,7 +10,7 @@ One static Next.js App Router site. Production is Google Cloud Run. Vercel deplo
 - `/connect` — Short trust lines, then the Cal.com schedule embed
 - `/offers` — Two boxes. Recurring slider: advisory at $500/month, then a long-term retainer from 2 hours/week ($1,600/month) in 2-hour steps to 20. One-time slider: fixed-scope project, SI employee install, SI training
 - `/use-cases` — Existing section headings. Each module is a title and one sentence
-- `/fabricators` — Fabricators. The only subtext under the heading is “Schedule a demo”. Two solutions in the same card format, with no description paragraphs: custom site-embedded text fabricator at $5,000, and Connect to Estuary-Fabricate at $500 setup and onboarding, plus a token fee equal to what OpenAI charges (pass-through, no markup), plus 10% of sales each month. The second solution has one status line: labeled demo, one sample shop, sample rates, no real charge
+- `/fabricators` — Fabricators. The only subtext under the heading is “Schedule a demo”. Two solutions in the same card format, with no description paragraphs: custom site-embedded text fabricator at $5,000, and Connect to Estuary-Fabricate at $500 setup and onboarding, plus a token fee equal to what OpenAI charges (pass-through, no markup), plus 10% of sales each month.
 - `/industries` — Industry sections for specific businesses. Retail: shift scheduling, invoice monitor, sales tally, and accounting. Legal firm: document intake routing, records management, review coordination, and email intake. Each item is a title and one sentence. Not part of Fabricators or the generic use-case modules, and not on the home bar. No client names
 - `/privacy` — existing Privacy copy (footer only)
 - `/terms` — existing Terms copy (footer only)
