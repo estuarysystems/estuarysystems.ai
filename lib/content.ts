@@ -16,7 +16,7 @@ export const site = {
   // The phone link shows ONLY when voiceNumber is valid E.164 AND voiceVerified is true
   // (set it true only after a real inbound test call reached the agent). /connect always shows.
   voiceNumber: "+16506292311",
-  voiceVerified: false,
+  voiceVerified: true,
   voiceLabel: "Call our automated line",
 } as const;
 
