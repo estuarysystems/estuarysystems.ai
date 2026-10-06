@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { CalEmbed } from "@/components/cal-embed";
+import { PhoneCta } from "@/components/phone-cta";
 import { connectTrust, site } from "@/lib/content";
 
 export const metadata: Metadata = {
@@ -29,6 +30,7 @@ export default function ConnectPage() {
             {site.email}
           </a>
         </p>
+        <PhoneCta className="mt-2" />
         <div className="mt-16 border border-line bg-slot">
           <CalEmbed />
         </div>
