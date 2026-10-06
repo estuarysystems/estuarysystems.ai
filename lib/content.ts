@@ -17,7 +17,7 @@ export const site = {
   // (set it true only after a real inbound test call reached the agent). /connect always shows.
   voiceNumber: "+16506292311",
   voiceVerified: false,
-  voiceLabel: "Call 24/7 · Automated phone response",
+  voiceLabel: "Call our automated line",
 } as const;
 
 export const homePage = {
@@ -242,6 +242,12 @@ export const privacy = {
     {
       heading: "Who sees it",
       paragraphs: ["Cal.com is a processor for booking. The host runs the site."],
+    },
+    {
+      heading: "Phone demo",
+      paragraphs: [
+        "Our automated phone demo uses Twilio to connect calls and ElevenLabs to generate spoken responses. Calls are transcribed, and conversation data is available to us for operating and improving the demo. Please avoid sharing sensitive personal information. You can also contact us by email or use the booking page.",
+      ],
     },
     {
       heading: "How to reach us",
