@@ -72,7 +72,10 @@ summary::marker {
 
 .use-case-card {
   position: relative;
+  display: flex;
   min-width: 0;
+  height: 100%;
+  flex-direction: column;
   overflow: hidden;
   border-radius: 8px;
   background: var(--slot);
@@ -104,10 +107,10 @@ summary::marker {
   position: relative;
   z-index: 1;
   display: flex;
-  height: 100%;
   min-height: 15.5rem;
+  flex: 1;
   flex-direction: column;
-  justify-content: space-between;
+  align-items: flex-start;
   gap: 1.5rem;
   padding: 1.5rem;
 }
