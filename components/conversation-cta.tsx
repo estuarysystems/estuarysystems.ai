@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { PhoneCta } from "@/components/phone-cta";
 import { site } from "@/lib/content";
 
 type ConversationCtaProps = {
@@ -15,6 +16,7 @@ export function ConversationCta({ className = "", showHint = true }: Conversatio
       >
         {site.ctaLabel}
       </Link>
+      <PhoneCta />
       {showHint ? <p className="text-sm text-muted">{site.ctaHint}</p> : null}
     </div>
   );

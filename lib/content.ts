@@ -12,6 +12,12 @@ export const site = {
   ctaLabel: "Start a conversation",
   ctaHint: "If you run the systems and already have the customers, we should talk.",
   email: "george@estuarysystems.ai",
+  // Phone line answered by the Estuary Systems voice agent. E.164, for example "+14155550100".
+  // The phone link shows ONLY when voiceNumber is valid E.164 AND voiceVerified is true
+  // (set it true only after a real inbound test call reached the agent). /connect always shows.
+  voiceNumber: "+16506292311",
+  voiceVerified: true,
+  voiceLabel: "Call our automated line",
 } as const;
 
 export const homePage = {
@@ -236,6 +242,12 @@ export const privacy = {
     {
       heading: "Who sees it",
       paragraphs: ["Cal.com is a processor for booking. The host runs the site."],
+    },
+    {
+      heading: "Phone demo",
+      paragraphs: [
+        "Our automated phone demo uses Twilio to connect calls and ElevenLabs to generate spoken responses. Calls are transcribed, and conversation data is available to us for operating and improving the demo. Please avoid sharing sensitive personal information. You can also contact us by email or use the booking page.",
+      ],
     },
     {
       heading: "How to reach us",

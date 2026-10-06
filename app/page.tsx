@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import { CalEmbed } from "@/components/cal-embed";
+import { PhoneCta } from "@/components/phone-cta";
 import { UseCaseReel } from "@/components/use-case-reel";
+import Link from "next/link";
 import { homePage, site } from "@/lib/content";
 
 export const metadata: Metadata = {
@@ -37,7 +39,15 @@ export default function HomePage() {
               >
                 {site.email}
               </a>
+              {" · "}
+              <Link
+                href={site.scheduleHref}
+                className="underline decoration-ink/20 underline-offset-4 hover:text-ink"
+              >
+                {site.scheduleHref}
+              </Link>
             </p>
+            <PhoneCta className="mt-1" />
           </div>
           <CalEmbed title="Schedule intro call" />
         </section>

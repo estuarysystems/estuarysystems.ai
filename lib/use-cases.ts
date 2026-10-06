@@ -143,7 +143,7 @@ export const useCaseSections: readonly UseCaseSection[] = [
       {
         title: "Automated phone response",
         description:
-          "An agent that answers your phone calls, gives callers answers, and books the next step.",
+          "An agent that answers phone calls, explains options, and guides callers to the next step.",
       },
     ],
   },
