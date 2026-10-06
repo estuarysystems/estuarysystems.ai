@@ -15,7 +15,7 @@ export const site = {
   // Phone line answered by the Estuary Systems voice agent. E.164, for example "+14155550100".
   // The phone link shows ONLY when voiceNumber is valid E.164 AND voiceVerified is true
   // (set it true only after a real inbound test call reached the agent). /connect always shows.
-  voiceNumber: "",
+  voiceNumber: "+16506292311",
   voiceVerified: false,
   voiceLabel: "Call 24/7 · Automated phone response",
 } as const;
