@@ -1,3 +1,4 @@
+import { UseCaseIcon } from "@/components/use-case-icons";
 import { moduleId, useCaseSections } from "@/lib/use-cases";
 
 export function UseCaseCatalog() {
@@ -19,15 +20,23 @@ export function UseCaseCatalog() {
               {section.name}
             </h2>
           </div>
-          <div className="mt-3 grid gap-2 md:grid-cols-2">
+          <div className="mt-4 grid grid-cols-1 gap-2 md:grid-cols-2 lg:grid-cols-3">
             {section.modules.map((item) => (
               <article
                 key={item.title}
                 id={moduleId(item.title)}
-                className="scroll-mt-24 border border-line bg-slot px-4 py-3.5 md:px-5 md:py-4"
+                className="use-case-card scroll-mt-24"
               >
-                <h3 className="text-base font-medium tracking-tight">{item.title}</h3>
-                <p className="mt-1 text-sm leading-relaxed text-muted">{item.description}</p>
+                <span className="use-case-card-fill" aria-hidden="true" />
+                <div className="use-case-card-body">
+                  <div className="use-case-card-icon">
+                    <UseCaseIcon title={item.title} />
+                  </div>
+                  <div className="use-case-card-copy">
+                    <h3 className="text-lg font-medium tracking-tight">{item.title}</h3>
+                    <p className="mt-2 text-sm leading-relaxed text-muted">{item.description}</p>
+                  </div>
+                </div>
               </article>
             ))}
           </div>
