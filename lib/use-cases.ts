@@ -136,6 +136,15 @@ export const useCaseSections: readonly UseCaseSection[] = [
         title: "Website Monitoring",
         description: "Track website updates and surface relevant changes.",
       },
+      {
+        title: "Email and calendar check",
+        description: "An agent that reviews your inbox to remove irrelevant emails.",
+      },
+      {
+        title: "Automated phone response",
+        description:
+          "An agent that answers your phone calls, gives callers answers, and books the next step.",
+      },
     ],
   },
 ];
@@ -144,6 +153,6 @@ export const useCaseModules: readonly UseCaseModule[] = useCaseSections.flatMap(
   (section) => section.modules,
 );
 
-if (useCaseModules.length !== 18) {
-  throw new Error(`Expected 18 use cases, found ${useCaseModules.length}`);
+if (useCaseModules.length !== 20) {
+  throw new Error(`Expected 20 use cases, found ${useCaseModules.length}`);
 }
