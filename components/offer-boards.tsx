@@ -3,12 +3,7 @@
 import { useState, type CSSProperties } from "react";
 import { ConversationCta } from "@/components/conversation-cta";
 import { site } from "@/lib/content";
-import {
-  RECURRING_MAX,
-  formatUsd,
-  oneTimeOffers,
-  recurringStop,
-} from "@/lib/offers";
+import { RECURRING_MAX, RETAINER_HOURS, formatUsd, oneTimeOffers, recurringStop } from "@/lib/offers";
 
 function mailtoHref(subject: string) {
   return `mailto:${site.email}?subject=${encodeURIComponent(subject)}`;
@@ -71,9 +66,7 @@ export function OfferBoards() {
         </p>
         <p className="mt-4 text-lg">{recurring.label}</p>
         <p className="mt-1 text-lg text-muted">{recurring.detail}</p>
-        <p className="mt-1 min-h-7 font-mono text-sm text-muted">
-          {recurring.blended ?? ""}
-        </p>
+        <p className="mt-1 min-h-7 font-mono text-sm text-muted">{recurring.blended}</p>
 
         <div className="mt-auto pt-10">
           <Range
@@ -87,8 +80,8 @@ export function OfferBoards() {
             className="mt-3 flex justify-between font-mono text-[10px] uppercase tracking-[0.14em] text-muted"
             aria-hidden="true"
           >
-            <span>Advisory</span>
-            <span>20 hr/wk</span>
+            <span>{RETAINER_HOURS[0]} hr/wk</span>
+            <span>{RETAINER_HOURS[RETAINER_HOURS.length - 1]} hr/wk</span>
           </div>
           <ConversationCta className="mt-8" showHint={false} />
           <p className="mt-4 font-mono text-xs">
