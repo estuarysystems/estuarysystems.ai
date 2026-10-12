@@ -57,11 +57,17 @@ export const bio =
 export const aboutAgency =
   "George Lu runs Estuary Systems LLC in Palo Alto. We are an SI integration and consulting agency. We help businesses put SI into operations so people can stay on the work only people should do.";
 
+export const engagementMinimumLine =
+  "Engagements start at $2,000/month. Custom solutions are scoped to your business.";
+
+export const connectBookingLine =
+  "Start with a 20-minute call about your workflow. Engagements start at $2,000/month. Custom solutions are scoped to your business.";
+
 export const connectTrust = [
   "George Lu runs Estuary Systems LLC in the Bay Area.",
   "I work at the intersection of business and engineering to bring execution to you and your team. Let me review your systems with you and see how I can help.",
   "Established operators. You know the systems. You have the customers.",
-  "The 15-minute call leads to advisory. A build is a separate quote.",
+  connectBookingLine,
   "Bring how the work runs today.",
 ] as const;
 
