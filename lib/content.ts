@@ -76,6 +76,7 @@ export const nav = [
   { href: "/use-cases", label: "Use cases" },
   { href: "/fabricators", label: "Fabricators" },
   { href: "/industries", label: "Industries" },
+  { href: "/audit", label: "Free AI audit" },
 ] as const;
 
 export const walk = [
