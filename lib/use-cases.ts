@@ -1,6 +1,6 @@
 export const useCasesPage = {
   title: "Use cases",
-  description: "Modules for intake, records, drafting, delivery, and monitoring.",
+  description: "Use cases for law firm intake: calls, intake data, follow-up, and documents.",
 } as const;
 
 export type UseCaseModule = {
@@ -23,127 +23,75 @@ export function moduleId(title: string) {
 
 export const useCaseSections: readonly UseCaseSection[] = [
   {
+    id: "calls",
+    name: "Calls",
+    modules: [
+      {
+        title: "AI receptionist",
+        description: "Answers each inbound call, 24 hours each day, including when staff are busy.",
+      },
+      {
+        title: "Call routing",
+        description: "Routes the call from the words of the caller. It does not use a menu that says press 1.",
+      },
+      {
+        title: "Staff handoff",
+        description: "Gives the intake record to staff so a person can review it.",
+      },
+    ],
+  },
+  {
     id: "intake",
     name: "Intake",
     modules: [
       {
-        title: "Intake Automation",
-        description: "Collect and organize incoming information for processing.",
-      },
-      {
-        title: "Filename Routing",
-        description: "Route files using established naming rules.",
-      },
-      {
-        title: "Content-Based Routing",
-        description: "Categorize and route documents based on their content.",
-      },
-      {
-        title: "Records Management",
-        description: "Maintain organized records and related information.",
-      },
-    ],
-  },
-  {
-    id: "document-drafting",
-    name: "Document drafting",
-    modules: [
-      {
-        title: "Draft Preparation",
-        description: "Gather and organize source materials for document creation.",
-      },
-      {
-        title: "Document Drafting",
+        title: "Intake data",
         description:
-          "Create draft documents using structured templates and source information.",
+          "Collects the name, phone or email, matter, date, injuries, insurance, urgency, and language.",
       },
       {
-        title: "Document Review",
-        description:
-          "Review documents for consistency, completeness, and alignment with source materials.",
+        title: "Intake portal",
+        description: "Opens a secure form that starts with the data from the call.",
       },
       {
-        title: "Review Coordination",
-        description: "Route documents to the appropriate reviewers.",
-      },
-    ],
-  },
-  {
-    id: "platform",
-    name: "Platform",
-    modules: [
-      {
-        title: "Team Information Exchange",
-        description: "Coordinate information requests across teams and systems.",
+        title: "Document intake",
+        description: "Accepts photos, a police report, and medical bills from the lead.",
       },
     ],
   },
   {
-    id: "delivery",
-    name: "Delivery",
+    id: "follow-up",
+    name: "Follow-up",
     modules: [
       {
-        title: "Product Development",
-        description: "Coordinate work from initial planning through delivery.",
+        title: "Lead follow-up",
+        description: "Contacts a lead who does not sign on the first call.",
       },
       {
-        title: "Delivery Standards",
-        description: "Apply consistent processes across development and delivery activities.",
+        title: "Consult booking",
+        description: "Helps the lead book a consult with the firm.",
       },
       {
-        title: "Technology Risk Management",
-        description: "Identify and assess risks across technology initiatives.",
+        title: "Email intake",
+        description: "Puts the facts from an email by a new lead into the intake record.",
       },
     ],
   },
   {
-    id: "email-intake",
-    name: "Email intake",
+    id: "documents",
+    name: "Documents",
     modules: [
       {
-        title: "Email Intake",
-        description: "Organize incoming messages and route them for appropriate action.",
-      },
-    ],
-  },
-  {
-    id: "visibility",
-    name: "Visibility",
-    modules: [
-      {
-        title: "Project Dashboard",
-        description: "Provide a consolidated view of project activity and progress.",
+        title: "Document draft",
+        description: "Prepares a draft from the intake record and a template.",
       },
       {
-        title: "Cost Tracking",
-        description: "Track operational costs to support oversight and planning.",
-      },
-    ],
-  },
-  {
-    id: "standalone",
-    name: "Standalone",
-    modules: [
-      {
-        title: "Training Content",
-        description: "Create instructional content to support learning and adoption.",
+        title: "Human review",
+        description: "A person reads the draft before the firm uses it.",
       },
       {
-        title: "Price Monitoring",
-        description: "Monitor pricing changes to support informed decisions.",
-      },
-      {
-        title: "Website Monitoring",
-        description: "Track website updates and surface relevant changes.",
-      },
-      {
-        title: "Email and calendar check",
-        description: "An agent that reviews your inbox to remove irrelevant emails.",
-      },
-      {
-        title: "Automated phone response",
-        description:
-          "An agent that answers phone calls, explains options, and guides callers to the next step.",
+        title: "Case record",
+        description: "Sends the intake record to the case management system.",
       },
     ],
   },
@@ -153,6 +101,6 @@ export const useCaseModules: readonly UseCaseModule[] = useCaseSections.flatMap(
   (section) => section.modules,
 );
 
-if (useCaseModules.length !== 20) {
-  throw new Error(`Expected 20 use cases, found ${useCaseModules.length}`);
+if (useCaseModules.length !== 12) {
+  throw new Error(`Expected 12 use cases, found ${useCaseModules.length}`);
 }

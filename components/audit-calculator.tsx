@@ -3,18 +3,15 @@
 import Link from "next/link";
 import { useId, useState } from "react";
 import {
-  AI_SAVINGS_SHARE,
   BOOK_CALL_LABEL,
   CUSTOM_GROUP_TITLE,
   DEFAULT_COUNT,
-  DEFAULT_HOURLY_WAGE,
   DEFAULT_MINUTES,
   auditGroups,
   cadenceOptions,
   formatAuditUsd,
   formatCount,
   rankByHours,
-  savingsSentence,
   spendSentence,
   tallyTasks,
   type Cadence,
@@ -67,7 +64,7 @@ export function AuditCalculator({ scheduleHref }: { scheduleHref: string }) {
   const [presets, setPresets] = useState<Record<string, TaskFields>>({});
   const [customTasks, setCustomTasks] = useState<CustomTask[]>([]);
   const [customName, setCustomName] = useState("");
-  const [wage, setWage] = useState(String(DEFAULT_HOURLY_WAGE));
+  const [wage, setWage] = useState("");
 
   function fieldsFor(id: string): TaskFields {
     return presets[id] ?? emptyFields();
@@ -115,7 +112,6 @@ export function AuditCalculator({ scheduleHref }: { scheduleHref: string }) {
   const tally = tallyTasks(selected, hourlyWage);
   const ranked = rankByHours(selected);
   const hasSelection = selected.length > 0;
-  const savingsPercent = Math.round(AI_SAVINGS_SHARE * 100);
 
   return (
     <>
@@ -213,18 +209,9 @@ export function AuditCalculator({ scheduleHref }: { scheduleHref: string }) {
           </h2>
           <div className="mt-5" aria-live="polite" aria-atomic="true">
             {hasSelection ? (
-              <>
-                <p className="text-lg leading-relaxed">
-                  {spendSentence(tally.hoursPerYear, tally.workWeeksPerYear)}
-                </p>
-                <p className="mt-3 text-lg leading-relaxed">
-                  {savingsSentence(
-                    tally.savedHoursPerYear,
-                    tally.savedWorkWeeksPerYear,
-                    tally.savedDollarsPerYear,
-                  )}
-                </p>
-              </>
+              <p className="text-lg leading-relaxed">
+                {spendSentence(tally.hoursPerYear, tally.workWeeksPerYear)}
+              </p>
             ) : (
               <p className="text-lg leading-relaxed text-muted">Select a task. The hours show here.</p>
             )}
@@ -237,7 +224,7 @@ export function AuditCalculator({ scheduleHref }: { scheduleHref: string }) {
             >
               {BOOK_CALL_LABEL}
             </Link>
-            <p className="mt-3 text-sm text-muted">We can look at these tasks with you.</p>
+            <p className="mt-3 text-sm text-muted">We can review these tasks with you.</p>
           </div>
 
           <dl className="mt-8 grid grid-cols-2 gap-x-4 gap-y-6">
@@ -250,25 +237,9 @@ export function AuditCalculator({ scheduleHref }: { scheduleHref: string }) {
             />
           </dl>
           <p className="mt-6 text-sm leading-relaxed text-muted">
-            We use 5 days each week and 52 weeks each year. 40 hours is 1 work week.
+            We use 5 days each week and 52 weeks each year. 40 hours is 1 work week. The dollar
+            amount is the hours times the pay per hour you enter.
           </p>
-
-          <div className="mt-6 border-t border-line pt-6">
-            <p className="font-mono text-[11px] uppercase tracking-[0.16em] text-muted">
-              Estimate · {savingsPercent}% savings
-            </p>
-            <dl className="mt-4 grid grid-cols-2 gap-x-4 gap-y-6">
-              <Stat label="Hours you can get back" value={formatCount(tally.savedHoursPerYear)} />
-              <Stat
-                label="Dollars you can get back"
-                value={
-                  tally.savedDollarsPerYear === null
-                    ? "—"
-                    : formatAuditUsd(tally.savedDollarsPerYear)
-                }
-              />
-            </dl>
-          </div>
 
           <div className="mt-6">
             <label htmlFor={wageId} className="block text-sm font-medium">

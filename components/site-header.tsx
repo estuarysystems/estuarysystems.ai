@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { nav } from "@/lib/content";
+import { nav, site } from "@/lib/content";
 
 export function SiteHeader() {
   return (
@@ -9,7 +9,7 @@ export function SiteHeader() {
           href="/"
           className="min-w-0 text-sm leading-tight tracking-tight text-balance text-ink max-[360px]:text-[11px]"
         >
-          Your Superintelligence Deployment Platform
+          {site.wordmark}
         </Link>
         <nav aria-label="Main" className="flex min-w-0 flex-wrap items-center justify-end gap-x-5 gap-y-2 font-mono text-[11px] uppercase tracking-[0.16em]">
           {nav.map((item) => (

@@ -1,11 +1,11 @@
-export const AUDIT_TITLE = "Free AI audit";
+export const AUDIT_TITLE = "Intake time";
 
 export const AUDIT_INTRO =
-  "Select the tasks you do by hand. Tell us how often. See the time you can get back.";
+  "Select the intake tasks your staff do. Enter the minutes and the count. See the hours.";
 
-export const CUSTOM_GROUP_TITLE = "We should sort that out";
+export const CUSTOM_GROUP_TITLE = "Other tasks";
 
-export const BOOK_CALL_LABEL = "Book a free intro call";
+export const BOOK_CALL_LABEL = "Book a call";
 
 /** 5 work days each week. 52 weeks each year. 40 hours is 1 work week. */
 export const DAYS_PER_WEEK = 5;
@@ -30,26 +30,23 @@ export type TaskDraft = {
 
 export const auditGroups = [
   {
-    id: "repeat",
-    title: "Same steps each time",
+    id: "calls",
+    title: "Calls and intake",
     tasks: [
-      { id: "onboarding", label: "Client onboarding" },
-      { id: "invoices", label: "Invoices" },
-      { id: "reports", label: "Reports" },
-      { id: "follow-up", label: "Follow-up emails" },
-      { id: "scheduling", label: "Scheduling" },
-      { id: "questions", label: "Answer common questions" },
+      { id: "answer-calls", label: "Answer a new call" },
+      { id: "intake-notes", label: "Write intake notes" },
+      { id: "send-portal", label: "Send the intake portal link" },
+      { id: "book-consult", label: "Book a consult" },
     ],
   },
   {
-    id: "copy",
-    title: "Copy info from one place to another",
+    id: "documents",
+    title: "Documents and follow-up",
     tasks: [
-      { id: "crm", label: "Emails into CRM" },
-      { id: "pdfs", label: "PDFs into a spreadsheet" },
-      { id: "forms", label: "Form data entry" },
-      { id: "records", label: "Update records in two systems" },
-      { id: "intake", label: "Call notes and intake" },
+      { id: "follow-up", label: "Follow up with a lead" },
+      { id: "save-documents", label: "Save photos and reports" },
+      { id: "case-system", label: "Move data into the case management system" },
+      { id: "draft", label: "Prepare a document draft" },
     ],
   },
 ] as const;

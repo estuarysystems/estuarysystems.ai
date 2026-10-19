@@ -16,11 +16,14 @@ const nextConfig = {
       "/blog",
     ];
 
-    return parked.map((source) => ({
-      source,
-      destination: "/",
-      permanent: false,
-    }));
+    return [
+      { source: "/fabricators", destination: "/offers", permanent: false },
+      ...parked.map((source) => ({
+        source,
+        destination: "/",
+        permanent: false,
+      })),
+    ];
   },
 };
 

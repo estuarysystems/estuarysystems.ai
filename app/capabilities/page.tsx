@@ -24,7 +24,7 @@ export default function CapabilitiesPage() {
             id="more-heading"
             className="text-4xl font-medium tracking-tight md:text-5xl"
           >
-            And much more
+            Also
           </h2>
           <div className="mt-10 grid grid-cols-1 gap-3 sm:grid-cols-2 lg:grid-cols-3">
             {capabilities.map((item) => (
