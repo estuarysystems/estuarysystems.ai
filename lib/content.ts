@@ -2,15 +2,15 @@ export const site = {
   wordmark: "Estuary Systems",
   legalName: "Estuary Systems LLC",
   domain: "estuarysystems.ai",
-  tagline: "Native SI developer. Operator partner.",
+  tagline: "AI for law firm intake.",
   oneLiner:
-    "I partner with established operators to accelerate ROI with SI.",
-  scheduleLabel: "Schedule time to chat with George",
+    "Estuary Systems helps law firms answer calls, collect intake data, and follow up.",
+  scheduleLabel: "Book a call with George",
   scheduleHref: "/connect",
   calEmbedSrc: "https://cal.com/george-lu-ouzdmq/15min?embed=true&theme=light",
-  workWithMe: "Work with me",
-  ctaLabel: "Start a conversation",
-  ctaHint: "If you run the systems and already have the customers, we should talk.",
+  workWithMe: "Book a call",
+  ctaLabel: "Book a call",
+  ctaHint: "Bring the way your firm answers calls today.",
   email: "george@estuarysystems.ai",
   // Phone line answered by the Estuary Systems voice agent. E.164, for example "+14155550100".
   // The phone link shows ONLY when voiceNumber is valid E.164 AND voiceVerified is true
@@ -21,104 +21,41 @@ export const site = {
 } as const;
 
 export const homePage = {
-  description: "Power Your Business with Superintelligence",
-  identity: "George Lu · Estuary Systems · Bay Area",
-} as const;
-
-export const home = {
-  tenure: {
-    heading: "Ten months is the relevant tenure",
-    paragraphs: [
-      "As of September 2026 I have been developing with AI for about ten months — which is also how long I have been developing software.",
-      "On a traditional resume that sounds short. It is not. The clock starts when agentic AI first reached tools, persistent workspaces, and GitHub — around November 2025. OpenClaw opened that door; Codex, Claude Code, and the later harnesses followed.",
-      "The models have improved week after week, often daily. I stay current. Recency and immersion are the competence now, not decades of tenure from before agents could do the work.",
-    ],
-  },
-  partners: {
-    heading: "Who I partner with",
-    paragraphs: [
-      "Established operators. You know the systems. You have the customers. I am not looking to invent your domain. I am looking for the people who already have it.",
-    ],
-  },
-  offer: {
-    heading: "What I do",
-    paragraphs: [
-      "I figure out how SI can improve the work you get paid for — and the work that sits around it — then I execute. You keep the relationships and the judgment. I put SI into the live systems so ROI arrives sooner.",
-    ],
-  },
-  close: {
-    heading: "If this is you",
-  },
+  description:
+    "Estuary Systems is an AI firm for law firms. We help small firms answer each call, collect intake data, and follow up. We do personal injury and immigration work first.",
+  kicker: "AI for law firm intake",
+  paragraphs: [
+    "Estuary Systems is an AI firm.",
+    "We help law firms.",
+    "We help small law firms.",
+    "We do personal injury and immigration work first.",
+    "An AI receptionist answers each call.",
+    "The receptionist collects intake data.",
+    "Follow-up keeps contact with a lead until the lead signs or says no.",
+  ],
 } as const;
 
 export const bio =
-  "Hi, I’m George. I work at the intersection of business and engineering to bring execution to you and your team. Let me review your systems with you and see how I can help.";
+  "I am George. I help law firms with intake and documents.";
 
 export const aboutAgency =
-  "George Lu runs Estuary Systems LLC in Palo Alto. We are an SI integration and consulting agency. We help businesses put SI into operations so people can stay on the work only people should do.";
-
-export const engagementMinimumLine =
-  "Engagements start at $2,000/month. Custom solutions are scoped to your business.";
-
-export const connectBookingLine =
-  "Start with a 20-minute call about your workflow. Engagements start at $2,000/month. Custom solutions are scoped to your business.";
+  "George Lu runs Estuary Systems LLC in Palo Alto. Estuary Systems is an AI firm. We help small law firms with intake and documents. We do personal injury and immigration work first.";
 
 export const connectTrust = [
   "George Lu runs Estuary Systems LLC in the Bay Area.",
-  "I work at the intersection of business and engineering to bring execution to you and your team. Let me review your systems with you and see how I can help.",
-  "Established operators. You know the systems. You have the customers.",
-  connectBookingLine,
-  "Bring how the work runs today.",
+  "Estuary Systems is an AI firm.",
+  "We help law firms with intake and documents.",
+  "We work with a law firm on its intake.",
+  "Bring the way your firm answers calls today.",
 ] as const;
 
 export const nav = [
-  { href: "/offers", label: "Offers" },
+  { href: "/offers", label: "Services" },
   { href: "/use-cases", label: "Use cases" },
-  { href: "/fabricators", label: "Fabricators" },
-  { href: "/industries", label: "Industries" },
-  { href: "/audit", label: "Free AI audit" },
+  { href: "/industries", label: "Law firms" },
+  { href: "/guides", label: "Guides" },
+  { href: "/audit", label: "Intake time" },
 ] as const;
-
-export const walk = [
-  {
-    title: "Discover",
-    line: "We sit with how the work runs today, before anyone changes it.",
-  },
-  {
-    title: "Design",
-    line: "We pick one process and write what done looks like.",
-  },
-  {
-    title: "Build",
-    line: "We make the smallest version that can actually run.",
-  },
-  {
-    title: "Eval",
-    line: "You review the output. We keep it, change it, or stop.",
-  },
-] as const;
-
-export const firstTwoWeeks = {
-  heading: "First two weeks",
-  intro:
-    "What the first two weeks look like. This is a story, not an offer. Not a product. Not priced. No buy button.",
-  days: [
-    "Day 1. We walk the current process with you.",
-    "Day 2. We write down the steps and who touches each one.",
-    "Day 3. We name the one process we will try first.",
-    "Day 4. We write the target: inputs, output, who checks it.",
-    "Day 5. We cut anything that should not exist.",
-    "Day 6. We agree the smallest version we can run.",
-    "Day 7. We stand up a test lane. It does not touch live work.",
-    "Day 8. We wire the first handoff.",
-    "Day 9. We put a person on the output before it goes anywhere.",
-    "Day 10. We run it on a handful of real examples you already have.",
-    "Day 11. We fix what broke.",
-    "Day 12. You read the outputs.",
-    "Day 13. We compare them to the old way on the same examples.",
-    "Day 14. We decide: keep, change, or stop.",
-  ],
-} as const;
 
 export const photos = {
   hero: {
@@ -131,93 +68,49 @@ export const photos = {
   },
 } as const;
 
-export const slots = {
-  tools: "Site Guard",
-} as const;
-
-export const capabilitiesIntro =
-  "Estuary is an AI agency at the intersection of business and engineering. We focus on execution: using current AI tools to get work out the door, and staying current so the work stays efficient.";
-
 export const primaryCapabilities = [
   {
-    title: "System conversion",
-    line: "Convert systems from how they run with people to an AI-run process.",
+    title: "AI receptionist",
+    line: "Answer inbound calls and collect intake data.",
   },
   {
-    title: "Process mapping",
-    line: "Figure out exactly how each process in the business runs, then judge whether AI can and should replace it.",
+    title: "Intake portal",
+    line: "Open a secure form that starts with the call data.",
   },
   {
-    title: "Local installation",
-    line: "Local model and agent installation.",
+    title: "Document work",
+    line: "Prepare a draft from the intake record. A person reviews it.",
   },
 ] as const;
 
 export const capabilities = [
   {
-    title: "Process workflows",
-    line: "A messy, repeated operations process becomes a working AI workflow your team can run.",
+    title: "Call routing",
+    line: "Route a call from the words of the caller. Do not use a menu that says press 1.",
   },
   {
-    title: "Work mapping",
-    line: "We document how the work actually happens before anyone automates it.",
-  },
-  {
-    title: "Document intake",
-    line: "Incoming PDFs, photos, and email become structured fields you can file, route, or scan as a table.",
-  },
-  {
-    title: "Data minimization",
-    line: "Only the fields the form needs leave the office. The rest stays put.",
+    title: "Follow-up",
+    line: "Contact a lead who does not sign on the first call.",
   },
   {
     title: "Human review",
-    line: "A person reads the output before it sends or files.",
+    line: "A person reads the output before the firm uses it.",
   },
   {
-    title: "Audit trail",
-    line: "A log of who did what, and when.",
+    title: "Conflict check",
+    line: "A person checks conflicts. The AI receptionist does not.",
   },
   {
-    title: "System of record",
-    line: "Chat is a nudge. The real record is what happened.",
+    title: "Case record",
+    line: "Send the intake record to the case management system.",
   },
   {
-    title: "Test versus live",
-    line: "Experiments run in a test lane. They do not touch live work.",
-  },
-  {
-    title: "Cited answers",
-    line: "Answers show the official source they came from.",
-  },
-  {
-    title: "Quality checks",
-    line: "A set of real examples so you can see if a change made drafts worse.",
-  },
-  {
-    title: "Work-moving bots",
-    line: "Slack bots and local operators that file, draft, or hand off a task. Not chat for chat's sake.",
-  },
-  {
-    title: "Secrets handling",
-    line: "Credentials stay out of prompts, logs, and anything a client can see.",
-  },
-  {
-    title: "Web tools",
-    line: "Landing pages and internal tools when a site is the product.",
-  },
-  {
-    title: "Later",
-    line: "Restaurant-station training built from real layouts.",
+    title: "No legal advice",
+    line: "The AI receptionist says that it cannot give legal advice.",
   },
 ] as const;
 
-export const howWeWork =
-  "AI can be wrong. Review is part of the design. If a process is repeated and costly, we can usually turn it into a system. If it should stay manual, we say so.";
-
-export const toolsPlaceholder = "Site Guard is listed on /tools.";
-
-export const blogPlaceholder = "Posts will be listed here.";
+export const blogPlaceholder = "There are no posts on this page.";
 
 export const alexandriaShelves = [
   "Operations",
@@ -231,24 +124,27 @@ export const privacy = {
   sections: [
     {
       heading: "Who we are",
-      paragraphs: ["Estuary Systems LLC is an SI agency in the Bay Area."],
+      paragraphs: [
+        "Estuary Systems LLC helps law firms. The office is in the Bay Area.",
+      ],
     },
     {
       heading: "What we collect",
       paragraphs: [
-        "We collect what you type and what Cal.com/hosting need to book a chat and run the site.",
+        "We collect the words you type on this site.",
+        "We collect the data that Cal.com and the host need to book a call and to run the site.",
       ],
     },
     {
-      heading: "What we don't",
+      heading: "What we do not do",
       paragraphs: [
         "We do not sell personal information.",
-        "We do not use confidential materials you send us to train models.",
+        "We do not use your confidential documents to train models.",
       ],
     },
     {
       heading: "Who sees it",
-      paragraphs: ["Cal.com is a processor for booking. The host runs the site."],
+      paragraphs: ["Cal.com processes booking data. The host runs the site."],
     },
     {
       heading: "Phone demo",
@@ -273,34 +169,36 @@ export const terms = {
       ],
     },
     {
-      heading: "Site is not a contract",
-      paragraphs: ["Prices can change. A listed price is not an offer."],
+      heading: "This site is not a contract",
+      paragraphs: ["A page on this site is not an offer. Work terms are in a signed agreement."],
     },
     {
-      heading: "Booking is not engagement",
+      heading: "A booking is not a client relationship",
       paragraphs: [
-        "A Cal.com chat is not a client relationship. Work starts when both sides sign.",
+        "A call that you book on Cal.com is not a client relationship. Work starts when both sides sign.",
       ],
     },
     {
-      heading: "IP",
+      heading: "Intellectual property",
       paragraphs: [
-        "Site content is ours. Your materials stay yours until a signed SOW says otherwise.",
+        "The content of this site belongs to Estuary Systems LLC.",
+        "Your documents stay yours until a signed agreement says otherwise.",
       ],
     },
     {
-      heading: "SI can be wrong",
-      paragraphs: ["SI output can be wrong. You verify before you use it."],
+      heading: "AI can be wrong",
+      paragraphs: ["AI output can be wrong. You check it before you use it."],
     },
     {
       heading: "Liability",
       paragraphs: [
-        "Liability capped at fees you actually paid us. If you paid zero, that's the cap.",
+        "Our liability is not more than the fees you paid to us.",
+        "If you paid no fees, the limit is zero.",
       ],
     },
     {
       heading: "California",
-      paragraphs: ["California law. Bay Area venue."],
+      paragraphs: ["California law applies. The venue is the Bay Area."],
     },
   ],
 } as const;

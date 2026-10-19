@@ -1,27 +1,31 @@
 # estuarysystems.ai
 
-Public company landing for **Estuary Systems LLC**. Minimal contact page.
+Public site for **Estuary Systems LLC**. Estuary Systems is an AI firm for law firms. It helps small law firms with intake and documents. Personal injury and immigration come first.
 
-One static Next.js App Router site. Production is Google Cloud Run. Vercel deploys from the **repo root** for test only (`vercel.json` pins the Next.js framework). This is not georgelu.ai, EstuaryMC, Conveyor, or intake. Do not attach the real domain to Vercel.
+One static Next.js App Router site. Production is Google Cloud Run. Vercel deploys from the **repo root** for preview only (`vercel.json` pins the Next.js framework). This is not georgelu.ai, EstuaryMC, Conveyor, or a separate intake product. Do not attach the real domain to Vercel.
 
 ## Routes
 
-- `/` — Estuary Systems, “Power Your Business with Superintelligence”, a rotating use-case bar, and the intro-call panel
-- `/connect` — Short trust lines, then the Cal.com schedule embed
-- `/offers` — Two boxes. Above them: “Engagements start at $2,000/month. Custom solutions are scoped to your business.” Recurring slider keeps the long-term retainer from 4 hours/week ($3,200/month) in 2-hour steps to 20 hours/week ($13,400/month). No advisory tier and no recurring price under $2,000/month. One-time slider: fixed-scope project, SI employee install, SI training, each a custom quote. Phone and email stay on both boxes.
-- `/use-cases` — Existing section headings. Each module is a title and one sentence
-- `/fabricators` — Fabricators. The only subtext under the heading is “Schedule a demo”. Two solutions in the same card format, with no description paragraphs: custom site-embedded text fabricator at $5,000, and Connect to Estuary-Fabricate at $500 setup and onboarding, plus a token fee equal to what OpenAI charges (pass-through, no markup), plus 10% of sales each month.
-- `/industries` — Industry sections for specific businesses. Retail: shift scheduling, invoice monitor, sales tally, and accounting. Legal firm: document intake routing, records management, review coordination, and email intake. Each item is a title and one sentence. Not part of Fabricators or the generic use-case modules, and not on the home bar. No client names
-- `/privacy` — existing Privacy copy (footer only)
-- `/terms` — existing Terms copy (footer only)
-- `/about`, `/alexandria`, `/tools`, `/tools/*` — parked; redirect to `/`
-- `/pricing`, `/capabilities`, `/blog` — parked; redirect to `/`
+- `/` — Name, “AI for law firm intake”, use-case bar, service list, guide link, demo phone line, and the book-a-call panel
+- `/connect` — Short lines, the demo phone line, and the Cal.com schedule embed
+- `/offers` — Services: AI receptionist, intake data, intake portal, follow-up, and document work. No prices
+- `/use-cases` — Law-firm intake modules. Each module is a title and one sentence. The home bar uses those titles
+- `/industries` — Law firms only: small law firms, personal injury, and immigration. No retail
+- `/guides` — Index of public guides
+- `/guides/converting-inbound-into-cases` — Numbered method: converting inbound calls into signed cases
+- `/audit` — Intake time worksheet. It adds the hours the visitor enters. It does not show a savings claim
+- `/privacy` — Privacy copy, including the Phone demo section
+- `/terms` — Terms copy
+- `/fabricators` — Removed. Redirects to `/offers`
+- `/about`, `/alexandria`, `/tools`, `/tools/*`, `/pricing`, `/capabilities`, `/blog` — parked; redirect to `/`
 
-No product nav. No `/ada`. No cookie banner. No cron. No CMS. No login.
+No `/ada`. No cookie banner. No cron. No CMS. No login.
 
 ## Nav
 
-Wordmark only. Privacy and Terms stay in the footer.
+Services, Use cases, Law firms, Guides, and Intake time. The wordmark links home. Guides, Privacy, and Terms are in the footer.
+
+The tap-to-call control says “Call our automated line” and uses `tel:+16506292311` on `/` and `/connect`. The guide also links that number.
 
 ## Deploy on Vercel
 
@@ -68,8 +72,8 @@ npm run build
 
 ## Locked
 
-Public frame is SI (systems intelligence), not AI.
+Public copy is for law firms. Write it in short sentences, one idea each, with simple words and active voice. Use one term for each concept. Do not use idioms or marketing claims.
 
-Home is the name, the superintelligence line, the rotating use-case bar, and the intro-call panel. Near that panel, show “Engagements start at $2,000/month. Custom solutions are scoped to your business.” `/offers` is two boxes. Above the boxes, show that same line. The recurring slider keeps every existing long-term retainer tier at or above $2,000/month, from 4 hours a week ($3,200/month) in 2-hour steps to 20 hours a week ($13,400/month). Do not offer advisory at $500/month or the 2-hour stop at $1,600/month. Do not add a $2,000 tier, hours, or deliverables. Price the retainer on each weekly hour, then multiply the week by 4 for the month: hours 1–4 at $200, hours 5–10 at $175, hours 11–20 at $150. Show that calculated month price. Do not list the hour bands as static labels. Fixed-scope project, SI employee install, and SI training are the one-time slider, each a custom quote. `/use-cases` keeps its section headings. Each module is a short title and one sentence, with no examples, badges, or section essays. The home bar uses those titles. `/industries` is a separate list of business sections: Retail (shift scheduling, invoice monitor, sales tally, accounting) and Legal firm (document intake routing, records management, review coordination, email intake). Do not add those items to the generic use-case modules, the home bar, or Fabricators. Do not name a client. Industry cards have no prices. `/connect` carries a short trust strip, then the booker. The trust strip includes “Start with a 20-minute call about your workflow. Engagements start at $2,000/month. Custom solutions are scoped to your business.” Every booking duration in site copy says 20 minutes. Do not change the Cal.com event `cal.com/george-lu-ouzdmq/15min`.
+Do not invent clients, results, metrics, testimonials, or prices. You may say that Estuary Systems works with a law firm on its intake. Do not name that client.
 
-Parked product routes redirect to `/`. Do not unpark the capabilities list or the blog. No case studies, client brands, logos, or invented metrics. Keep thin Privacy and Terms. Public-safe copy only: no Covenant, no client names. Do not revive `/pricing`. Do not add prices outside the $2,000/month engagement minimum line, the long-term retainer ladder, and the two Fabricators solutions. Fabricators lists $5,000 for the custom site-embedded text fabricator. Connect to Estuary-Fabricate is $500 setup and onboarding, plus a token fee equal to what OpenAI charges (pass-through, no markup), plus 10% of sales each month. Do not invent a dollar rate for the token fee. Do not claim a live card charge.
+Keep the Cal.com path on `/connect`: `cal.com/george-lu-ouzdmq/15min`. Keep the Phone demo section on `/privacy`. Do not unpark `/capabilities`, `/blog`, or `/tools`. Do not revive `/pricing` or Fabricators. Do not change DNS, domains, or deploy config for a copy change.
