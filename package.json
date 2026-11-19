@@ -7,7 +7,7 @@
     "build": "next build",
     "start": "next start",
     "lint": "eslint",
-    "test": "node --experimental-strip-types --test lib/audit.test.ts"
+    "test": "node --experimental-strip-types --import ./scripts/register-test.mjs --test lib/audit.test.ts lib/voice-song/voice-song.test.ts"
   },
   "dependencies": {
     "cheerio": "^1.2.0",
