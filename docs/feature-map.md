@@ -7,7 +7,7 @@ Public frame is SI (systems intelligence). Header and footer wrap every page. Th
 ## Header
 
 - Wordmark links to `/`.
-- Nav: Offers, Use cases, Fabricators, Industries, Free AI audit, Playground.
+- Nav: Offers, Use cases, Fabricators, Industries, Free AI audit, Playground, AI Glossary.
 
 ## Footer
 
@@ -55,6 +55,19 @@ Voice Song Maker. Fully client-side.
 - Player: Twinkle Twinkle, Ode to Joy, Happy Birthday, or an uploaded MIDI file. Playback uses saved clips only and pitch-shifts the nearest clip when a note is missing. Piano roll, tempo control, WAV download.
 - Clips stay in this browser (IndexedDB). No upload, no account, no analytics.
 - The page has a short “Do it yourself” section and a link to the X post that prompted the idea.
+
+### `/glossary`
+
+AI Glossary. Read a short meaning for each AI word. Each word has two examples.
+
+- Technical | Theory switch at the top. Technical has 197 terms. Theory has 61 terms.
+- Group chips and level chips. Levels are Level 1, Level 2, and Level 3.
+- Cards stay beige. Each card has a thin black outline, a 2×3 gray dot grid, the term name, a level badge, and one picture.
+- Search filters the list. The count line shows how many terms match.
+
+### `/glossary/[slug]`
+
+One term. The page shows the meaning, two examples, and related terms. Some terms have a short interactive example. Every term has a static page. There are 258 slugs.
 
 ### `/privacy`, `/terms`
 

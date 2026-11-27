@@ -7,7 +7,7 @@
     "build": "next build",
     "start": "next start",
     "lint": "eslint",
-    "test": "node --experimental-strip-types --import ./scripts/register-test.mjs --test lib/audit.test.ts lib/voice-song/voice-song.test.ts"
+    "test": "node --experimental-strip-types --import ./scripts/register-test.mjs --test lib/audit.test.ts lib/voice-song/voice-song.test.ts && tsx --test features/glossary/terms.test.ts features/glossary/widgets/math.test.ts"
   },
   "dependencies": {
     "cheerio": "^1.2.0",
@@ -23,6 +23,7 @@
     "eslint": "^9",
     "eslint-config-next": "16.3.1",
     "tailwindcss": "^4",
+    "tsx": "^4.23.15",
     "typescript": "^5"
   }
 }
