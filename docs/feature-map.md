@@ -7,7 +7,7 @@ Public frame is SI (systems intelligence). Header and footer wrap every page. Th
 ## Header
 
 - Wordmark links to `/`.
-- Nav: Offers, Use cases, Fabricators, Industries, Free AI audit, Playground, AI Glossary.
+- Nav: Offers, Use cases, Industries, Free AI audit, Playground, AI Glossary.
 
 ## Footer
 
@@ -17,19 +17,15 @@ Public frame is SI (systems intelligence). Header and footer wrap every page. Th
 
 ### `/`
 
-Home. Name, “Power Your Business with Superintelligence”, the rotating use-case bar, and the intro-call panel. Near the panel: “Engagements start at $2,000/month. Custom solutions are scoped to your business.”
+Home. Name, “Power Your Business with Superintelligence”, the rotating use-case bar, and the intro-call panel. The panel does not show a price.
 
 ### `/offers`
 
-Two offer boxes and the same engagement line. Recurring retainer slider and one-time slider. Phone and email stay on both boxes.
+Three items: fixed-scope project, SI employee install, and SI training. No prices, rates, or retainers. One “Book a call” link goes to `/connect`. Phone and email stay on the page.
 
 ### `/use-cases`
 
 Section headings. Each module is a title and one sentence. Cards use the shared card style.
-
-### `/fabricators`
-
-Heading, “Schedule a demo”, and two solution cards.
 
 ### `/industries`
 
@@ -37,11 +33,11 @@ Retail and Legal firm. Each item is a title and one sentence. No prices. No clie
 
 ### `/audit`
 
-Free AI audit. The visitor selects hand tasks, sets time and cadence, and sees the time tally. Book-a-call link stays on the page.
+Free AI audit. The visitor selects hand tasks, sets time and cadence, and sees the time tally. The page does not show dollars. The “Book a call” link stays on the page.
 
 ### `/connect`
 
-Short trust lines, then the Cal.com schedule embed. Booking copy says 20 minutes. The Cal.com event slug stays `cal.com/george-lu-ouzdmq/15min`.
+Short trust lines, then the Cal.com schedule embed. Booking copy says 20 minutes. The lines do not name a price. The Cal.com event slug stays `cal.com/george-lu-ouzdmq/15min`.
 
 ### `/playground`
 
@@ -75,4 +71,6 @@ Legal pages. Footer links only.
 
 ## Parked
 
-These redirect to `/`: `/about`, `/alexandria`, `/tools`, `/tools/:path*`, `/pricing`, `/capabilities`, `/blog`.
+These redirect to `/`: `/about`, `/alexandria`, `/tools`, `/tools/:path*`, `/fabricators`, `/capabilities`, `/blog`.
+
+`/pricing` redirects to `/connect`.

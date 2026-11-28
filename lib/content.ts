@@ -9,7 +9,7 @@ export const site = {
   scheduleHref: "/connect",
   calEmbedSrc: "https://cal.com/george-lu-ouzdmq/15min?embed=true&theme=light",
   workWithMe: "Work with me",
-  ctaLabel: "Start a conversation",
+  ctaLabel: "Book a call",
   ctaHint: "If you run the systems and already have the customers, we should talk.",
   email: "george@estuarysystems.ai",
   // Phone line answered by the Estuary Systems voice agent. E.164, for example "+14155550100".
@@ -57,11 +57,7 @@ export const bio =
 export const aboutAgency =
   "George Lu runs Estuary Systems LLC in Palo Alto. We are an SI integration and consulting agency. We help businesses put SI into operations so people can stay on the work only people should do.";
 
-export const engagementMinimumLine =
-  "Engagements start at $2,000/month. Custom solutions are scoped to your business.";
-
-export const connectBookingLine =
-  "Start with a 20-minute call about your workflow. Engagements start at $2,000/month. Custom solutions are scoped to your business.";
+export const connectBookingLine = "Start with a 20-minute call about your workflow.";
 
 export const connectTrust = [
   "George Lu runs Estuary Systems LLC in the Bay Area.",
@@ -74,7 +70,6 @@ export const connectTrust = [
 export const nav = [
   { href: "/offers", label: "Offers" },
   { href: "/use-cases", label: "Use cases" },
-  { href: "/fabricators", label: "Fabricators" },
   { href: "/industries", label: "Industries" },
   { href: "/audit", label: "Free AI audit" },
   { href: "/playground", label: "Playground" },
@@ -103,7 +98,7 @@ export const walk = [
 export const firstTwoWeeks = {
   heading: "First two weeks",
   intro:
-    "What the first two weeks look like. This is a story, not an offer. Not a product. Not priced. No buy button.",
+    "What the first two weeks look like. This is a story, not an offer. Not a product. No buy button.",
   days: [
     "Day 1. We walk the current process with you.",
     "Day 2. We write down the steps and who touches each one.",
@@ -276,7 +271,7 @@ export const terms = {
     },
     {
       heading: "Site is not a contract",
-      paragraphs: ["Prices can change. A listed price is not an offer."],
+      paragraphs: ["Text on this site is not an offer."],
     },
     {
       heading: "Booking is not engagement",

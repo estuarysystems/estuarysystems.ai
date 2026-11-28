@@ -130,7 +130,7 @@ export const useCaseSections: readonly UseCaseSection[] = [
       },
       {
         title: "Price Monitoring",
-        description: "Monitor pricing changes to support informed decisions.",
+        description: "Monitor price changes to support informed decisions.",
       },
       {
         title: "Website Monitoring",

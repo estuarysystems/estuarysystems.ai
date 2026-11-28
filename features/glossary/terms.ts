@@ -1974,7 +1974,7 @@ export const terms: Term[] = [
     level: 2,
     side: "theory",
     definition: "Effective altruism is a movement that tries to do the most good per unit of time or money, often by comparing causes with numbers. Some people in the movement focus on AI risk.",
-    examples: ["A helper has $10. Effective altruism asks which gift will help the most people, not only which gift feels nicest.", "Some effective altruists fund mosquito nets. Others fund work on AI safety, because they think the future stakes are large."],
+    examples: ["A helper can give one gift. Effective altruism asks which gift will help the most people, not only which gift feels nicest.", "Some effective altruists fund mosquito nets. Others fund work on AI safety, because they think the future stakes are large."],
   },
   {
     slug: "longtermism",

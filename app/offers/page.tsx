@@ -15,7 +15,9 @@ export default function OffersPage() {
     <main id="main">
       <div className="mx-auto max-w-6xl px-5 py-16 md:py-24">
         <h1 className="text-6xl font-medium tracking-tight md:text-8xl">{offersPage.title}</h1>
-        <p className="mt-8 max-w-2xl text-lg leading-relaxed text-pretty">{offersPage.minimumLine}</p>
+        <p className="mt-8 max-w-2xl text-lg leading-relaxed text-pretty">
+          Book a call to talk about the work.
+        </p>
         <OfferBoards />
       </div>
     </main>
