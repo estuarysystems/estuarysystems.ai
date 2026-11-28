@@ -7,11 +7,9 @@ import {
   BOOK_CALL_LABEL,
   CUSTOM_GROUP_TITLE,
   DEFAULT_COUNT,
-  DEFAULT_HOURLY_WAGE,
   DEFAULT_MINUTES,
   auditGroups,
   cadenceOptions,
-  formatAuditUsd,
   formatCount,
   rankByHours,
   savingsSentence,
@@ -48,11 +46,6 @@ function readNumber(value: string): number {
   return parsed;
 }
 
-function readWage(value: string): number | null {
-  if (value.trim() === "") return null;
-  return readNumber(value);
-}
-
 function draftFromFields(fields: TaskFields): TaskDraft {
   return {
     minutes: readNumber(fields.minutes),
@@ -62,12 +55,10 @@ function draftFromFields(fields: TaskFields): TaskDraft {
 }
 
 export function AuditCalculator({ scheduleHref }: { scheduleHref: string }) {
-  const wageId = useId();
   const customNameId = useId();
   const [presets, setPresets] = useState<Record<string, TaskFields>>({});
   const [customTasks, setCustomTasks] = useState<CustomTask[]>([]);
   const [customName, setCustomName] = useState("");
-  const [wage, setWage] = useState(String(DEFAULT_HOURLY_WAGE));
 
   function fieldsFor(id: string): TaskFields {
     return presets[id] ?? emptyFields();
@@ -111,8 +102,7 @@ export function AuditCalculator({ scheduleHref }: { scheduleHref: string }) {
     }),
   ];
 
-  const hourlyWage = readWage(wage);
-  const tally = tallyTasks(selected, hourlyWage);
+  const tally = tallyTasks(selected, null);
   const ranked = rankByHours(selected);
   const hasSelection = selected.length > 0;
   const savingsPercent = Math.round(AI_SAVINGS_SHARE * 100);
@@ -218,11 +208,7 @@ export function AuditCalculator({ scheduleHref }: { scheduleHref: string }) {
                   {spendSentence(tally.hoursPerYear, tally.workWeeksPerYear)}
                 </p>
                 <p className="mt-3 text-lg leading-relaxed">
-                  {savingsSentence(
-                    tally.savedHoursPerYear,
-                    tally.savedWorkWeeksPerYear,
-                    tally.savedDollarsPerYear,
-                  )}
+                  {savingsSentence(tally.savedHoursPerYear, tally.savedWorkWeeksPerYear, null)}
                 </p>
               </>
             ) : (
@@ -244,10 +230,6 @@ export function AuditCalculator({ scheduleHref }: { scheduleHref: string }) {
             <Stat label="Hours each week" value={formatCount(tally.hoursPerWeek)} />
             <Stat label="Hours each year" value={formatCount(tally.hoursPerYear)} />
             <Stat label="Work weeks each year" value={formatCount(tally.workWeeksPerYear)} />
-            <Stat
-              label="Dollars each year"
-              value={tally.dollarsPerYear === null ? "—" : formatAuditUsd(tally.dollarsPerYear)}
-            />
           </dl>
           <p className="mt-6 text-sm leading-relaxed text-muted">
             We use 5 days each week and 52 weeks each year. 40 hours is 1 work week.
@@ -257,33 +239,9 @@ export function AuditCalculator({ scheduleHref }: { scheduleHref: string }) {
             <p className="font-mono text-[11px] uppercase tracking-[0.16em] text-muted">
               Estimate · {savingsPercent}% savings
             </p>
-            <dl className="mt-4 grid grid-cols-2 gap-x-4 gap-y-6">
+            <dl className="mt-4">
               <Stat label="Hours you can get back" value={formatCount(tally.savedHoursPerYear)} />
-              <Stat
-                label="Dollars you can get back"
-                value={
-                  tally.savedDollarsPerYear === null
-                    ? "—"
-                    : formatAuditUsd(tally.savedDollarsPerYear)
-                }
-              />
             </dl>
-          </div>
-
-          <div className="mt-6">
-            <label htmlFor={wageId} className="block text-sm font-medium">
-              Pay per hour ($)
-            </label>
-            <input
-              id={wageId}
-              inputMode="decimal"
-              min={0}
-              step="0.01"
-              value={wage}
-              onChange={(event) => setWage(event.target.value)}
-              className="mt-2 min-h-12 w-full border border-line bg-paper px-4 text-base text-ink tabular-nums"
-            />
-            <p className="mt-2 text-sm text-muted">Optional. Clear this to hide the dollars.</p>
           </div>
         </section>
 

@@ -6,21 +6,28 @@ const nextConfig = {
   // Docker builds do not set VERCEL, so they still get standalone.
   output: process.env.VERCEL ? undefined : "standalone",
   async redirects() {
-    const parked = [
+    const toHome = [
       "/about",
       "/alexandria",
       "/tools",
       "/tools/:path*",
-      "/pricing",
+      "/fabricators",
       "/capabilities",
       "/blog",
     ];
 
-    return parked.map((source) => ({
-      source,
-      destination: "/",
-      permanent: false,
-    }));
+    return [
+      ...toHome.map((source) => ({
+        source,
+        destination: "/",
+        permanent: false,
+      })),
+      {
+        source: "/pricing",
+        destination: "/connect",
+        permanent: false,
+      },
+    ];
   },
 };
 

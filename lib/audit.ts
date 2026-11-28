@@ -5,7 +5,7 @@ export const AUDIT_INTRO =
 
 export const CUSTOM_GROUP_TITLE = "We should sort that out";
 
-export const BOOK_CALL_LABEL = "Book a free intro call";
+export const BOOK_CALL_LABEL = "Book a call";
 
 /** 5 work days each week. 52 weeks each year. 40 hours is 1 work week. */
 export const DAYS_PER_WEEK = 5;

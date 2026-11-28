@@ -3,7 +3,7 @@ import { CalEmbed } from "@/components/cal-embed";
 import { PhoneCta } from "@/components/phone-cta";
 import { UseCaseReel } from "@/components/use-case-reel";
 import Link from "next/link";
-import { engagementMinimumLine, homePage, site } from "@/lib/content";
+import { homePage, site } from "@/lib/content";
 
 export const metadata: Metadata = {
   description: homePage.description,
@@ -32,9 +32,6 @@ export default function HomePage() {
             <h2 id="intro-call-heading" className="text-base font-medium">
               Schedule intro call
             </h2>
-            <p className="mt-3 max-w-xl text-sm leading-relaxed text-pretty">
-              {engagementMinimumLine}
-            </p>
             <p className="mt-3 font-mono text-xs text-muted">
               <a
                 href={`mailto:${site.email}`}
